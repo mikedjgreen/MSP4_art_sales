@@ -1,3 +1,29 @@
+- [MSP4 art sales](#msp4-art-sales)
+  * [UX](#ux)
+    + [User Stories](#user-stories)
+    + [Strategy plane](#strategy-plane)
+    + [Scope plane](#scope-plane)
+    + [Structure plane](#structure-plane)
+    + [Skeleton plane](#skeleton-plane)
+      - [Database](#database)
+    + [Surface plane](#surface-plane)
+      - [Colour palette](#colour-palette)
+      - [Typeface](#typeface)
+  * [Features](#features)
+    + [Existing Features](#existing-features)
+    + [Features Left to Implement](#features-left-to-implement)
+  * [Technologies Used](#technologies-used)
+  * [Testing](#testing)
+  * [Deployment](#deployment)
+  * [Credits](#credits)
+    + [Content](#content)
+    + [Media](#media)
+    + [Acknowledgements](#acknowledgements)
+
+[TOC](http://ecotrust-canada.github.io/markdown-toc/)
+
+
+
 # MSP4 art sales
 
 This is Prickwillow Art Club's sales site.
@@ -28,6 +54,37 @@ Use this section to provide insight into your UX process, focusing on who this w
 
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
 
+### Strategy plane
+
+### Scope plane
+
+
+### Structure plane
+
+
+### Skeleton plane
+
+#### Database
+
+Using [DBdiagram](https://dbdiagram.io/home) to display the database schema for the club's sales.
+
+![Art_Sales_Schema](docs/art_sales_schema.png)
+
+
+### Surface plane
+
+#### Colour palette
+
+Using [Coolors](https://coolors.co/) to select web site's colour scheme.
+
+A neutral, pastel blue has been selected as a uniform background colour for the page header and footer. (#D9E6F3).
+Any variations to this colour comes from the limited pallet:
+![MSP4 Palette](docs/msp4_palette.png)
+
+#### Typeface
+
+The typeface has been chosen, font family 'Roboto' with backup font family of 'Arial'.
+
 ## Features
 
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
@@ -47,9 +104,12 @@ In addition, you may also use this section to discuss plans for additional featu
 
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
-
+- [Bootstrap](https://getbootstrap.com/) to provide a mobile-first responsive framework for the site.
+- [Font Awesome](https://fontawesome.com/) to provide additional icons.
+- [JavaScript](https://www.javascript.com/) to provide core API and DOM manipulation.
+- [JQuery](https://jquery.com) to simplify DOM manipulation.
+- [TOC for markdown](https://ecotrust-canada.github.io/markdown-toc/) to generate table of contents for README
+- [Coolors](https://coolors.co/) for site's limited colour palette choices.
 
 ## Testing
 
