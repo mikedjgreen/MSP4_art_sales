@@ -1,0 +1,8 @@
+Collecting dj_database_url
+  Downloading dj_database_url-0.5.0-py2.py3-none-any.whl (5.5 kB)
+Installing collected packages: dj-database-url
+Successfully installed dj-database-url-0.5.0
+Collecting psycopg2-binary
+  Downloading psycopg2_binary-2.8.6-cp38-cp38-manylinux1_x86_64.whl (3.0 MB)
+Installing collected packages: psycopg2-binary
+Successfully installed psycopg2-binary-2.8.6

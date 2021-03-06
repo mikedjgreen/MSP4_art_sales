@@ -33,7 +33,7 @@ This 'profit' can be ploughed back into the art club's activities.
 
 It will be useful to record the patronage of the art club and gain some understanding of the market for their members work.
 
- 
+--- 
 ## UX
  
 Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
@@ -64,6 +64,20 @@ This section is also where you would share links to any wireframes, mockups, dia
 
 ### Skeleton plane
 
+#### Wireframes
+Mobile-first responsiveness screen design.
+Different screen sizes:
+
+Chrome's Inspect emulator |	width	| breakpoint
+--------------------------|---------|-------------
+Nokia Lumia	|320px	|(default)
+Nexus 7	    |600px	|s
+iPad :	    |768px	|m
+Kindle Fire:	        |800px|	m
+iPad Pro:	            |1024px|	l
+Laptop with MDPI screen	|1280px|	xl
+
+
 #### Database
 
 Using [DBdiagram](https://dbdiagram.io/home) to display the database schema for the club's sales.
@@ -85,6 +99,7 @@ Any variations to this colour comes from the limited pallet:
 
 The typeface has been chosen, font family 'Roboto' with backup font family of 'Arial'.
 
+---
 ## Features
 
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
@@ -100,6 +115,7 @@ In addition, you may also use this section to discuss plans for additional featu
 ### Features Left to Implement
 - Another feature idea
 
+---
 ## Technologies Used
 
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
@@ -108,9 +124,16 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [Font Awesome](https://fontawesome.com/) to provide additional icons.
 - [JavaScript](https://www.javascript.com/) to provide core API and DOM manipulation.
 - [JQuery](https://jquery.com) to simplify DOM manipulation.
+- [Python 3](https://www.python.org/about/)    
+    - Programming language used to interact with a database and framework.
+    - [Docstring PEP 257](https://www.python.org/dev/peps/pep-0257/) documentation convention followed.
+- [Django Framework](https://www.djangoproject.com/start/overview/)
+- [Stripe Payments](https://stripe.com/gb)
 - [TOC for markdown](https://ecotrust-canada.github.io/markdown-toc/) to generate table of contents for README
 - [Coolors](https://coolors.co/) for site's limited colour palette choices.
-
+- [Responsiveness](http://ami.responsivedesign.is/) to check site's ability to scale up and down.
+- [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/)
+---
 ## Testing
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
@@ -131,7 +154,18 @@ You should also mention in this section any interesting bugs or problems you dis
 
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
+---
 ## Deployment
+
+
+### Initial Heroku App Creation
+
+Heroku app name is msp4-art-sales.
+
+It is connected to a django postgres database service.
+
+
+
 
 This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
 
@@ -142,15 +176,18 @@ In particular, you should provide all details of the differences between the dep
 
 In addition, if it is not obvious, you should also describe how to run your code locally.
 
-
+---
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- The text, for better or worse, is the author's work of imagination.
 
 ### Media
-- The photos used in this site were obtained from ...
+- The photos used in this site were taken from the author's works.
 
 ### Acknowledgements
 
 - I received inspiration for this project from [Ely Art Society](https://www.elyartsociety.com/)
+-  also [Artsy](https://www.artsy.net/)
+
+- Many of the code segments were from [Code Institute](https://codeinstitute.net/)'s tutorials.
