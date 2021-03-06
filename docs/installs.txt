@@ -6,3 +6,13 @@ Collecting psycopg2-binary
   Downloading psycopg2_binary-2.8.6-cp38-cp38-manylinux1_x86_64.whl (3.0 MB)
 Installing collected packages: psycopg2-binary
 Successfully installed psycopg2-binary-2.8.6
+Collecting django
+  Downloading Django-3.1.7-py3-none-any.whl (7.8 MB)
+Collecting asgiref<4,>=3.2.10
+  Downloading asgiref-3.3.1-py3-none-any.whl (19 kB)
+Collecting pytz
+  Downloading pytz-2021.1-py2.py3-none-any.whl (510 kB)
+Collecting sqlparse>=0.2.2
+  Downloading sqlparse-0.4.1-py3-none-any.whl (42 kB)
+Installing collected packages: sqlparse, pytz, asgiref, django
+Successfully installed asgiref-3.3.1 django-3.1.7 pytz-2021.1 sqlparse-0.4.1
