@@ -33,8 +33,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.messages',
-    'django.contrib.sites',
 
     'allauth',
     'allauth.account',
@@ -43,8 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.messages',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
+    
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -62,7 +64,10 @@ ROOT_URLCONF = 'msp4_art_sales.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -130,6 +130,7 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [Django Framework](https://www.djangoproject.com/start/overview/)
     - [Authentication system](https://django-allauth.readthedocs.io/en/latest/installation.html) 
 - [Stripe Payments](https://stripe.com/gb)
+    - [Allauth Provider](https://django-allauth.readthedocs.io/en/latest/providers.html#stripe)
 - [TOC for markdown](https://ecotrust-canada.github.io/markdown-toc/) to generate table of contents for README
 - [Coolors](https://coolors.co/) for site's limited colour palette choices.
 - [Responsiveness](http://ami.responsivedesign.is/) to check site's ability to scale up and down.
