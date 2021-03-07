@@ -159,7 +159,10 @@ If this section grows too long, you may want to split it off into a separate fil
 ---
 ## Deployment
 
+### local application run
 
+    ```python3 manage.py runserver```
+    
 ### Initial Heroku App Creation
 
 Heroku app name is msp4-art-sales.
