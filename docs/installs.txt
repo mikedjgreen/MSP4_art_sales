@@ -36,3 +36,7 @@ Requirement already satisfied: idna<3,>=2.5 in /home/gitpod/.pyenv/versions/3.8.
 Requirement already satisfied: chardet<5,>=3.0.2 in /home/gitpod/.pyenv/versions/3.8.7/lib/python3.8/site-packages (from requests->django-allauth) (4.0.0)
 Requirement already satisfied: urllib3<1.27,>=1.21.1 in /home/gitpod/.pyenv/versions/3.8.7/lib/python3.8/site-packages (from requests->django-allauth) (1.26.2)
 Requirement already satisfied: certifi>=2017.4.17 in /home/gitpod/.pyenv/versions/3.8.7/lib/python3.8/site-packages (from requests->django-allauth) (2020.12.5)
+Collecting django-crispy-forms
+  Downloading django_crispy_forms-1.11.1-py3-none-any.whl (108 kB)
+Installing collected packages: django-crispy-forms
+Successfully installed django-crispy-forms-1.11.1
