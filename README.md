@@ -85,8 +85,21 @@ Laptop with MDPI screen	|1280px|	xl
 
 Using [DBdiagram](https://dbdiagram.io/home) to display the database schema for the club's sales.
 
-![Art_Sales_Schema](docs/art_sales_schema.png)
+![Art_Sales_Schema](docs/db_schema.png)
 
+Entity | Primary Key | Related to
+------------|-------------|------------
+Order_items| Order_id| Orders
+Order_items| Artwork_id| Artworks
+Orders| Id | Patrons
+Orders|Id|Subs
+Artworks|Id|Order_items
+Members|Id|Artworks
+Members|Id|Subs 
+Patrons|Id|Orders
+Subs|Year|
+Subs|Member_id|Members
+Subs|Order_id|Orders
 
 ### Surface plane
 
