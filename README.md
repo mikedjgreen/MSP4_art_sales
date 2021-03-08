@@ -44,12 +44,15 @@ Use this section to provide insight into your UX process, focusing on who this w
 
 - As a patron I would like to buy artworks within my price range and likes.
 - As a frequent patron I would like to keep a record of my purchases with the club.
-- As a patron I would like to keep a running total of incomplete orders.
+- As a patron I would like to keep a running total of incomplete orders,
+            including V.A.T.,
+            delivery charges (if not collecting)
+            and potential commission to the club.
 
 - As a club member I would like to purchase my year's club membership subscription remotely.
 
 - As a club administrator I would like to enter new works of art as images with details such as price, media and dimensions of the piece.
-- As a club administrator I would like to distribute funds from sales commission to activities that will benefit the club.
+- As a club administrator I would like an idea of sales commissions in order to distribute funds to activities that will benefit the club.
 
 
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
@@ -192,7 +195,9 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 ### Acknowledgements
 
-- I received inspiration for this project from [Ely Art Society](https://www.elyartsociety.com/)
+I received inspiration for this project from:
+-  [Ely Art Society](https://www.elyartsociety.com/)
 -  also [Artsy](https://www.artsy.net/)
+-  also [Jackson's Art Supplies](https://www.jacksonsart.com/)
 
-- Many of the code segments were from [Code Institute](https://codeinstitute.net/)'s tutorials.
+Many of the code segments were from [Code Institute](https://codeinstitute.net/)'s tutorials.

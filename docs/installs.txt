@@ -39,4 +39,12 @@ Requirement already satisfied: certifi>=2017.4.17 in /home/gitpod/.pyenv/version
 Collecting django-crispy-forms
   Downloading django_crispy_forms-1.11.1-py3-none-any.whl (108 kB)
 Installing collected packages: django-crispy-forms
-Successfully installed django-crispy-forms-1.11.1
+Successfully installed django-crispy-forms-1.11.1Collecting stripe
+  Downloading stripe-2.56.0-py2.py3-none-any.whl (204 kB)
+Requirement already satisfied: requests>=2.20 in /home/gitpod/.pyenv/versions/3.8.7/lib/python3.8/site-packages (from stripe) (2.25.1)
+Requirement already satisfied: chardet<5,>=3.0.2 in /home/gitpod/.pyenv/versions/3.8.7/lib/python3.8/site-packages (from requests>=2.20->stripe) (4.0.0)
+Requirement already satisfied: certifi>=2017.4.17 in /home/gitpod/.pyenv/versions/3.8.7/lib/python3.8/site-packages (from requests>=2.20->stripe) (2020.12.5)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /home/gitpod/.pyenv/versions/3.8.7/lib/python3.8/site-packages (from requests>=2.20->stripe) (1.26.2)
+Requirement already satisfied: idna<3,>=2.5 in /home/gitpod/.pyenv/versions/3.8.7/lib/python3.8/site-packages (from requests>=2.20->stripe) (2.10)
+Installing collected packages: stripe
+Successfully installed stripe-2.56.0
