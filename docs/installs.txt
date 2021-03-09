@@ -48,3 +48,7 @@ Requirement already satisfied: urllib3<1.27,>=1.21.1 in /home/gitpod/.pyenv/vers
 Requirement already satisfied: idna<3,>=2.5 in /home/gitpod/.pyenv/versions/3.8.7/lib/python3.8/site-packages (from requests>=2.20->stripe) (2.10)
 Installing collected packages: stripe
 Successfully installed stripe-2.56.0
+Collecting Pillow
+  Downloading Pillow-8.1.2-cp38-cp38-manylinux1_x86_64.whl (2.2 MB)
+Installing collected packages: Pillow
+Successfully installed Pillow-8.1.2
