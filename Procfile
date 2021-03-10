@@ -1,1 +1,1 @@
-web: gunicorn msp4-art-sales.wsgi:application
+web: gunicorn msp4_art_sales.wsgi:application
