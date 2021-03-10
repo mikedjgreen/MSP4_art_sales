@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'artworks',
+    'msp4-art-sales',
     # Other
     'crispy_forms',
     'storages',

@@ -12,3 +12,4 @@ vscode:
     - kevinglasson.cornflakes-linter@0.5.1:KAaMshgHOKan8eojXQ53OQ==
 ports:
     - port: 8000
+      onOpen: open-browser
