@@ -2,6 +2,31 @@ html {
     height: 100%;
 }
 
+
+header {
+    background-color: #D9E6F3;
+}
+
+body {
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #FFFF;
+    font-family: "Gudea","Roboto", sans-serif;
+}
+
+footer {
+    background-color: #D9E6F3;
+}
+
+.logo-font {
+    text-transform: uppercase;
+    color: #2F587B;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
