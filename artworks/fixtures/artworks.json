@@ -5,6 +5,7 @@
         "fields": {
             "title": "Torso",
             "artist_id": 1,
+            "description": "Soft Pastel on tinted pastel paper",
             "price": 30.00,
             "sold": "FALSE",
             "category": "PA",
@@ -20,8 +21,9 @@
         "pk": 2,
         "model": "artworks.Artworks",
         "fields": {
-            "title": "Torso",
+            "title": "Becca",
             "artist_id": 1,
+            "description": "Acrylics on canvas board",
             "price": 30.00,
             "sold": "FALSE",
             "category": "Painting",

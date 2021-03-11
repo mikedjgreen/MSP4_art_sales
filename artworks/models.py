@@ -14,6 +14,10 @@ class art_category(models.TextChoices):
 
 
 class Artworks(models.Model):
+
+    class Meta:
+        verbose_name_plural = "Artworks"
+
     title = models.CharField(max_length=254)
     artist_id = models.IntegerField(blank=False)
     description = models.TextField()
