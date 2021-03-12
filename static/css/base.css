@@ -44,6 +44,10 @@ footer {
 	z-index: -1;
 }
 
+#commission-banner h4 {
+    font-size: .9rem;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
