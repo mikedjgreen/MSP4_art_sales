@@ -20,11 +20,15 @@ footer {
 
 .logo-font {
     text-transform: uppercase;
-    color: #2F587B;
+    color: #2F587B; /* Bdazzled Blue */
 }
 
 .main-logo-link {
     width: fit-content;
+}
+
+.text-black {
+    color:#2F587B !important;  /* Bdazzled Blue */
 }
 
 /* -------------------------------- Media Queries */
