@@ -7,7 +7,9 @@ header {
     background-color: #D9E6F3;
 }
 
-body {
+body {  
+    background-image: url('/media/fenland_background.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #FFFF;
@@ -21,6 +23,7 @@ footer {
 .logo-font {
     text-transform: uppercase;
     color: #2F587B; /* Bdazzled Blue */
+    font-size: 1.5rem;
 }
 
 .main-logo-link {
@@ -29,6 +32,16 @@ footer {
 
 .text-black {
     color:#2F587B !important;  /* Bdazzled Blue */
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
 }
 
 /* -------------------------------- Media Queries */
