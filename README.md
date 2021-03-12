@@ -299,6 +299,8 @@ I received inspiration for this project from:
 -  also [Artsy](https://www.artsy.net/)
 -  also [Jackson's Art Supplies](https://www.jacksonsart.com/)
 
+Discussions on art gallery commission rates proved to be useful, [e.g. Fine Art Trade Guild](https://www.fineart.co.uk/faq/commission-rates-to-artists-32.aspx)
+
 More technical help on html, css, javascript and python from [w3schools](https://www.w3schools.com/js/default.asp)
 
 Many of the code segments were from [Code Institute](https://codeinstitute.net/)'s tutorials.
