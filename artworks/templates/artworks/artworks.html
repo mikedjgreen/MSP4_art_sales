@@ -13,7 +13,25 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                {{ artworks }}
+                <table>
+                    {% for artwork in artworks %}
+                    <tr>
+                        <td>{{ artwork.title }}</td>
+                        <!-- artist_id = models.IntegerField(blank=False) -->
+                        <td>{{ artwork.description }}</td>
+                        <td>{{ artwork.price }}</td>
+                        <td>{{ artwork.sold }}</td>
+                        <td>{{ artwork.category }}</td>
+                        <!-- image_path = models.URLField(max_length=1024, blank=True) -->
+                        <td>{{ artwork.created_at }}</td>
+                        <td>{{ artwork.height }}</td>
+                        <td>{{ artwork.width }}</td>
+                        <!--   depth = models.DecimalField(max_digits=6, decimal_places=2, blank=True) -->
+                        <td>{{ artwork.image }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+
             </div>
         </div>
     </div>
