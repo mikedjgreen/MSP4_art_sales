@@ -1,38 +1,362 @@
 [
     {
-        "pk": 1,
-        "model": "artworks.Artworks",
-        "fields": {
-            "title": "Torso",
-            "artist_id": 1,
-            "description": "Soft Pastel on tinted pastel paper",
-            "price": 30.00,
-            "sold": "FALSE",
-            "category": "PA",
-            "created_at": "2021-02-12 11:58",
-            "image_path":"media/torso.jpg",
-            "height": 16.0,
-            "width": 10.0,
-            "depth": 0.0,
-            "image": "torso.jpg"
-        }
-    },
-    {
         "pk": 2,
         "model": "artworks.Artworks",
         "fields": {
-            "title": "Becca",
+            "title": "AvaEtte",
             "artist_id": 1,
-            "description": "Acrylics on canvas board",
+            "description": "Soft Pastel on paper",
             "price": 30.00,
-            "sold": "FALSE",
-            "category": "Painting",
+            "sold": False,
+            "category": "DR",
             "created_at": "2021-02-12 11:58",
-            "image_path":"media/noimage.png",
+            "image_path":"media/ava_ette.jpg",
             "height": 16.0,
             "width": 10.0,
             "depth": 0.0,
-            "image": "noimage.png"
+            "image": "ava_ette.jpg"
         }
-    }
+    },
+    {
+        "pk": 3,
+        "model": "artworks.Artworks",
+        "fields": {
+            "title": "Ayame",
+            "artist_id": 1,
+            "description": "Soft Pastel on paper",
+            "price": 30.00,
+            "sold": False,
+            "category": "DR",
+            "created_at": "2021-02-12 11:58",
+            "image_path":"media/ayame.jpg",
+            "height": 16.0,
+            "width": 10.0,
+            "depth": 0.0,
+            "image": "ayame.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "artworks.Artworks",
+        "fields": {
+            "title": "Black Cat",
+            "artist_id": 1,
+            "description": "Soft Pastel on paper",
+            "price": 30.00,
+            "sold": False,
+            "category": "DR",
+            "created_at": "2021-02-12 11:58",
+            "image_path":"media/black_cat.jpg",
+            "height": 16.0,
+            "width": 10.0,
+            "depth": 0.0,
+            "image": "black_cat.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "artworks.Artworks",
+        "fields": {
+            "title": "Brigitte",
+            "artist_id": 1,
+            "description": "Soft Pastel on paper",
+            "price": 30.00,
+            "sold": False,
+            "category": "DR",
+            "created_at": "2021-02-12 11:58",
+            "image_path":"media/brigitte_framed.jpg",
+            "height": 16.0,
+            "width": 10.0,
+            "depth": 0.0,
+            "image": "brigitte_framed.jpg"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "artworks.Artworks",
+        "fields": {
+            "title": "Cheap Model",
+            "artist_id": 1,
+            "description": "Soft Pastel on card",
+            "price": 30.00,
+            "sold": False,
+            "category": "DR",
+            "created_at": "2021-02-12 11:58",
+            "image_path":"media/cheap_model.jpg",
+            "height": 16.0,
+            "width": 10.0,
+            "depth": 0.0,
+            "image": "cheap_model.jpg"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "artworks.Artworks",
+        "fields": {
+            "title": "Coffee Sack",
+            "artist_id": 1,
+            "description": "Soft Pastel on paper",
+            "price": 30.00,
+            "sold": False,
+            "category": "DR",
+            "created_at": "2021-02-12 11:58",
+            "image_path":"media/coffee_sack.jpg",
+            "height": 16.0,
+            "width": 10.0,
+            "depth": 0.0,
+            "image": "coffee_sack.jpg"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "artworks.Artworks",
+        "fields": {
+            "title": "Dani",
+            "artist_id": 1,
+            "description": "Soft Pastel on paper",
+            "price": 30.00,
+            "sold": False,
+            "category": "DR",
+            "created_at": "2021-02-12 11:58",
+            "image_path":"media/dani_1_1.jpg",
+            "height": 16.0,
+            "width": 10.0,
+            "depth": 0.0,
+            "image": "dani_1_1.jpg"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "artworks.Artworks",
+        "fields": {
+            "title": "Deni",
+            "artist_id": 1,
+            "description": "Soft Pastel on paper",
+            "price": 30.00,
+            "sold": False,
+            "category": "DR",
+            "created_at": "2021-02-12 11:58",
+            "image_path":"media/deni_portrait_close.jpg",
+            "height": 16.0,
+            "width": 10.0,
+            "depth": 0.0,
+            "image": "deni_portrait_close.jpg"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "artworks.Artworks",
+        "fields": {
+            "title": "Dragon Stand",
+            "artist_id": 1,
+            "description": "Hardboard",
+            "price": 30.00,
+            "sold": False,
+            "category": "SC",
+            "created_at": "2021-02-12 11:58",
+            "image_path":"media/dragon_stand.jpg",
+            "height": 16.0,
+            "width": 10.0,
+            "depth": 0.0,
+            "image": "dragon_stand.jpg"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "artworks.Artworks",
+        "fields": {
+            "title": "Egg Tempera",
+            "artist_id": 1,
+            "description": "Egg Tempera on Wood Block",
+            "price": 30.00,
+            "sold": False,
+            "category": "PA",
+            "created_at": "2021-02-12 11:58",
+            "image_path":"media/egg_tempera.jpg",
+            "height": 16.0,
+            "width": 10.0,
+            "depth": 0.0,
+            "image": "egg_tempera.jpg"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "artworks.Artworks",
+        "fields": {
+            "title": "Life Sketch",
+            "artist_id": 1,
+            "description": "Acrylic on board",
+            "price": 30.00,
+            "sold": False,
+            "category": "PA",
+            "created_at": "2021-02-12 11:58",
+            "image_path":"media/life_sketch.jpg",
+            "height": 16.0,
+            "width": 10.0,
+            "depth": 0.0,
+            "image": "life_sketch.jpg"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "artworks.Artworks",
+        "fields": {
+            "title": "Little Devils",
+            "artist_id": 1,
+            "description": "Acrylic on board",
+            "price": 30.00,
+            "sold": False,
+            "category": "PA",
+            "created_at": "2021-02-12 11:58",
+            "image_path":"media/little_devils.jpg",
+            "height": 16.0,
+            "width": 10.0,
+            "depth": 0.0,
+            "image": "little_devils.jpg"
+        }
+    }, 
+    {
+        "pk": 13,
+        "model": "artworks.Artworks",
+        "fields": {
+            "title": "Orlando Furiosa",
+            "artist_id": 1,
+            "description": "Acrylic on board",
+            "price": 30.00,
+            "sold": False,
+            "category": "PA",
+            "created_at": "2021-02-12 11:58",
+            "image_path":"media/orlando_furiosa.jpg",
+            "height": 16.0,
+            "width": 10.0,
+            "depth": 0.0,
+            "image": "orlando_furiosa.jpg"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "artworks.Artworks",
+        "fields": {
+            "title": "Petunia",
+            "artist_id": 1,
+            "description": "Soft Pastel board",
+            "price": 30.00,
+            "sold": False,
+            "category": "DR",
+            "created_at": "2021-02-12 11:58",
+            "image_path":"media/petunia.jpg",
+            "height": 16.0,
+            "width": 10.0,
+            "depth": 0.0,
+            "image": "petunia.jpg"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "artworks.Artworks",
+        "fields": {
+            "title": "Taking Shape",
+            "artist_id": 1,
+            "description": "Modelling Clay",
+            "price": 30.00,
+            "sold": False,
+            "category": "SC",
+            "created_at": "2021-02-12 11:58",
+            "image_path":"media/taking_shape.jpg",
+            "height": 16.0,
+            "width": 10.0,
+            "depth": 0.0,
+            "image": "taking_shape.jpg"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "artworks.Artworks",
+        "fields": {
+            "title": "Taking Shape",
+            "artist_id": 1,
+            "description": "Ink on paper",
+            "price": 30.00,
+            "sold": False,
+            "category": "DR",
+            "created_at": "2021-02-12 11:58",
+            "image_path":"media/vaunt_pen_ink.jpg",
+            "height": 16.0,
+            "width": 10.0,
+            "depth": 0.0,
+            "image": "vaunt_pen_ink.jpg"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "artworks.Artworks",
+        "fields": {
+            "title": "Vaunt",
+            "artist_id": 1,
+            "description": "Ink on paper",
+            "price": 30.00,
+            "sold": False,
+            "category": "DR",
+            "created_at": "2021-02-12 11:58",
+            "image_path":"media/vaunt_pen_ink.jpg",
+            "height": 16.0,
+            "width": 10.0,
+            "depth": 0.0,
+            "image": "vaunt_pen_ink.jpg"
+        }
+    }, 
+    {
+        "pk": 18,
+        "model": "artworks.Artworks",
+        "fields": {
+            "title": "Venetian Gothic",
+            "artist_id": 1,
+            "description": "Soft Pastel on paper",
+            "price": 30.00,
+            "sold": False,
+            "category": "DR",
+            "created_at": "2021-02-12 11:58",
+            "image_path":"media/venetian_gothic.jpg",
+            "height": 16.0,
+            "width": 10.0,
+            "depth": 0.0,
+            "image": "venetian_gothic.jpg"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "artworks.Artworks",
+        "fields": {
+            "title": "Another Gothic",
+            "artist_id": 1,
+            "description": "Soft Pastel on paper",
+            "price": 30.00,
+            "sold": False,
+            "category": "DR",
+            "created_at": "2021-02-12 11:58",
+            "image_path":"media/venetian_gothic2.jpg",
+            "height": 16.0,
+            "width": 10.0,
+            "depth": 0.0,
+            "image": "venetian_gothic2.jpg"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "artworks.Artworks",
+        "fields": {
+            "title": "Ziggy Flame",
+            "artist_id": 1,
+            "description": "Soft Pastel on paper",
+            "price": 30.00,
+            "sold": False,
+            "category": "DR",
+            "created_at": "2021-02-12 11:58",
+            "image_path":"media/ziggy_flame.jpg",
+            "height": 16.0,
+            "width": 10.0,
+            "depth": 0.0,
+            "image": "ziggy_flame.jpg"
+        }
+    }                                                  
 ]

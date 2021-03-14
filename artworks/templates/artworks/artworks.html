@@ -10,28 +10,41 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="overlay"></div>
+    <div class="container-fluid">
         <div class="row">
-            <div class="col">
-                <table>
+            <div class="col-10 offset-1">
+                <div class="row">
                     {% for artwork in artworks %}
-                    <tr>
-                        <td>{{ artwork.title }}</td>
-                        <!-- artist_id = models.IntegerField(blank=False) -->
-                        <td>{{ artwork.description }}</td>
-                        <td>{{ artwork.price }}</td>
-                        <td>{{ artwork.sold }}</td>
-                        <td>{{ artwork.category }}</td>
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card h-100 border-0">
+                            {% if artwork.image %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ artwork.image.url }}" alt="{{ artwork.title }}">
+                                </a>                           
+                            {% else %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ artwork.title }}">
+                                </a>
+                            {% endif %}
+                            <div class="card-body pb-8">
+                                <p>{{ artwork.title }}</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col">
+                                        <p>{{ artwork.price }}</p>
+                                        <p>{{ artwork.description }}</p>
+                                        <p>{{ artwork.sold }} {{ artwork.category }}</p>
                         <!-- image_path = models.URLField(max_length=1024, blank=True) -->
-                        <td>{{ artwork.created_at }}</td>
-                        <td>{{ artwork.height }}</td>
-                        <td>{{ artwork.width }}</td>
-                        <!--   depth = models.DecimalField(max_digits=6, decimal_places=2, blank=True) -->
-                        <td>{{ artwork.image }}</td>
-                    </tr>
+                                        <p>{{ artwork.created_at }}</p>
+                                        <p>{{ artwork.height }} {{ artwork.width }} {% if artwork.depth != 0 %} {{ artwork.depth }} {%endif %}</p>
+                                    </div>
+                                </div>
+                            </div>   
+                    </div>
                     {% endfor %}
-                </table>
-
+                </div>
             </div>
         </div>
     </div>
