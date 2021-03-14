@@ -33,12 +33,7 @@
                             <div class="card-footer">
                                 <div class="row">
                                     <div class="col">
-                                        <p>{{ artwork.price }}</p>
-                                        <p>{{ artwork.description }}</p>
-                                        <p>{{ artwork.sold }} {{ artwork.category }}</p>
-                        <!-- image_path = models.URLField(max_length=1024, blank=True) -->
-                                        <p>{{ artwork.created_at }}</p>
-                                        <p>{{ artwork.height }} {{ artwork.width }} {% if artwork.depth != 0 %} {{ artwork.depth }} {%endif %}</p>
+                                            {{ artwork }}
                                     </div>
                                 </div>
                             </div>   
