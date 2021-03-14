@@ -29,6 +29,12 @@ footer {
     width: fit-content;
 }
 
+.browse-button {
+    background: #2F587B;
+    color: #D9E6F3;
+    min-width: 260px;
+}
+
 .text-black {
     color:#2F587B !important;  /* Bdazzled Blue */
 }
