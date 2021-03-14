@@ -8,7 +8,7 @@ def all_artworks(request):
     artworks = Artworks.objects.all()
 
     context = {
-        'artworks': artworks
+        'artworks': artworks,
     }
 
     return render(request, 'artworks/artworks.html', context)

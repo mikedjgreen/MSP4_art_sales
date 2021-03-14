@@ -12,6 +12,7 @@
 {% block content %}
     <div class="overlay"></div>
     <div class="container-fluid">
+
         <div class="row">
             <div class="col-10 offset-1">
                 <div class="row">
@@ -27,17 +28,22 @@
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ artwork.title }}">
                                 </a>
                             {% endif %}
-                            <div class="card-body pb-8">
-                                <p>{{ artwork.title }}</p>
+                            <div class="card-body pb-0">
+                                <p class="mb-0" >{{ artwork.title }}</p>
                             </div>
-                            <div class="card-footer">
+                            <div class="card-footer bg-white pt-0 border-0 text-left">
                                 <div class="row">
                                     <div class="col">
-                                            {{ artwork }}
+                                        {% if artwork.sold %}
+                                            <small class="text-sold"><i class="fas fa-star mr-1"></i>JUST SOLD!</small>
+                                        {% else %}
+                                            <p class="lead mb-0 text-left font-weight-bold">&pound;{{ artwork.price }}</p>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>   
-                    </div>
+                        </div>
+                    </div>    
                     {% endfor %}
                 </div>
             </div>
