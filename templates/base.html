@@ -120,12 +120,20 @@
 
     {% if messages %}
     <div class="message-container">
-      <strong>Messages:</strong>
-      <ul>
+        <strong>Messages:</strong>
         {% for message in messages %}
-        <li>{{message}}</li>
+            {% with message.level as level %}
+                {% if level == 40 %}
+                    {% include 'includes/toasts/toast_error.html' %}
+                {% elif level == 30 %}
+                    {% include 'includes/toasts/toast_warning.html' %}
+                {% elif level == 25 %}
+                    {% include 'includes/toasts/toast_success.html' %}
+                {% else %}
+                    {% include 'includes/toasts/toast_info.html' %}
+                {% endif %}
+            {% endwith %}
         {% endfor %}
-      </ul>
     </div>
     {% endif %}
 
@@ -139,6 +147,9 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
     {% endblock %}
 
   </body>

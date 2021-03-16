@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
-#DEBUG = True
+# DEBUG = True
 
 
 ALLOWED_HOSTS = ['msp4-art-sales.herokuapp.com', 'localhost']
@@ -93,6 +93,9 @@ TEMPLATES = [
         },
     },
 ]
+
+# For toasts
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 # From https://django-allauth.readthedocs.io/en/latest/installation.html
 AUTHENTICATION_BACKENDS = [
