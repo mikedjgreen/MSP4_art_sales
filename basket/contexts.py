@@ -1,5 +1,7 @@
 from decimal import Decimal
 from django.conf import settings
+from django.shortcuts import get_object_or_404
+from artworks.models import Artworks
 
 
 def basket_contents(request):
@@ -7,6 +9,17 @@ def basket_contents(request):
     basket_items = []
     total = 0
     artworks_count = 0
+    basket = request.session.get('basket', {})
+
+    for item_id, quantity in basket.items():
+        artwork = get_object_or_404(Artworks, pk=item_id)
+        total += quantity * artwork.price
+        artworks_count += quantity
+        basket_items.append({
+            'item_id': item_id,
+            'quantity': quantity,
+            'artwork': artwork,
+        })
 
     if total > 0:
         vat = total * Decimal(settings.VAT_PERCENTAGE / 100)
