@@ -39,6 +39,7 @@
                     {% if artwork.depth %}
                         <p class="mt-3">Depth:{{ artwork.depth }}cm.</p>
                     {% endif %}
+
                     <form class="form" action="{% url 'add_to_basket' artwork.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
@@ -58,11 +59,15 @@
                                     </span>
                                     <span class="text-uppercase">Keep Looking</span>
                                 </a>
-                                <input type="submit" class="add-basket btn btn-black rounded-0 text-uppercase mt-5" value="Add to Basket">
+                                {% if artwork.sold != True %}
+                                    <input type="submit" class="add-basket btn btn-black rounded-0 text-uppercase mt-5" 
+                                           value="Add to Basket">
+                                {% endif %}
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form> 
+
                 </div>
             </div>
         </div>

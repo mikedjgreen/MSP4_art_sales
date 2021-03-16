@@ -4,6 +4,7 @@ from .models import Artworks
 
 class ArtworksAdmin(admin.ModelAdmin):
     list_display = (
+        'id',
         'title',
         'artist_id',
         'description',
