@@ -27,11 +27,11 @@ def all_artworks(request):
             if not qry:
                 messages.error(request, "You didn't enter any search criteria")
                 return redirect(reverse('artworks'))
-                
+
             queries = Q(title__icontains=qry) | Q(description__icontains=qry)
             artworks = artworks.filter(queries)
 
-    current_sorting = f'{sort}_{direction}'        
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'artworks': artworks,

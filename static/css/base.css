@@ -35,6 +35,20 @@ footer {
     min-width: 260px;
 }
 
+.add-basket {
+    background: #2F587B;
+    color: #D9E6F3;
+    border: #D9E6F3;
+}
+
+/* Basket quantity should default to 1 for most artworks
+   so no need to display quantity input on form
+   but leaving the option to interactively display for cards,
+   prints, limited edition reproductions */
+.basket-qty {
+    display: none;
+}
+
 .text-black {
     color:#2F587B !important;  /* Bdazzled Blue */
 }
