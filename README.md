@@ -144,8 +144,8 @@ Entity | Primary Key | Related to
 ------------|-------------|------------
 Order_items| Order_id| Orders
 Order_items| Artwork_id| Artworks
-Orders| Id | Patrons
-Orders|Id|Subs
+Orders| Order_id | Patrons
+Orders|Order_id|Subs
 Artworks|Id|Order_items
 Members|Id|Artworks
 Members|Id|Subs 
