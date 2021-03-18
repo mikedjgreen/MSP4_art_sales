@@ -51,7 +51,7 @@ class Orders(models.Model):
         Update grand total each time a line item is added,
         accounting for VAT and commission.
         """
-        self.total = self.lineitems.aggregate(Sum('line_total'))['line_total_sum']
+        self.total = self.lineitems.aggregate(Sum('line_total'))['line_total_sum'] or 0
         self.vat = self.total * settings.VAT_PERCENTAGE / 100
         self.commission = self.total * settings.COMMISSION_PERCENTAGE / 100
         self.delivery = self.total * settings.DELIVERY_PERCENTAGE / 100
