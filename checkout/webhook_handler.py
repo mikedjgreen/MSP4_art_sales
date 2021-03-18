@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 
 from .models import Orders, OrderItems
-from artworks.models import Artwork
+from artworks.models import Artworks
 
 import json
 import time
@@ -83,7 +83,7 @@ class StripeWH_Handler:
                     stripe_pid=pid,
                 )
                 for item_id, item_data in json.loads(basket).items():
-                    artwork = Artwork.objects.get(id=item_id)
+                    artwork = Artworks.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderItems(
                             order=order,
