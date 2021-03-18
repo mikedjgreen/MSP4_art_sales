@@ -7,6 +7,7 @@ from django.conf import settings
 from django_countries.fields import CountryField  # ISO-3166
 
 from artworks.models import Artworks
+from profiles.models import Patron
 #  Orders and OrderItems
 
 
@@ -16,7 +17,9 @@ class Orders(models.Model):
         verbose_name_plural = "Orders"
 
     order_number = models.CharField(max_length=32, null=False, editable=False)
-    user_id = models.IntegerField()
+    user_profile = models.ForeignKey(Patron, on_delete=models.SET_NULL,
+                                     null=True,
+                                     blank=True, related_name='orders')
     # entries for anonymous buyer, not patron
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
