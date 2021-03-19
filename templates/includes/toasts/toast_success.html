@@ -20,7 +20,11 @@
                 {% for item in basket_items %}
                     <div class="row">
                         <div class="col-3 my-1">
-                            <img class="w-100" src="{{ item.artwork.image.url }}">
+                            {% if item.product.image %}
+                                <img class="w-100" src="{{ item.artwork.image.url }}" alt="{{ item.artwork.title }}">
+                            {% else %}
+                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.artwork.title }}">
+                            {% endif %}
                         </div>
                         <div class="col-9">
                             <p class="my-0"><strong>{{ item.artwork.title }}</strong></p>

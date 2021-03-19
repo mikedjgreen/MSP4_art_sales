@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Artworks
 from django.contrib import messages
 from django.db.models import Q
+from .forms import ArtworkForm
 
 
 def all_artworks(request):
@@ -52,3 +53,25 @@ def artwork_detail(request, artwork_id):
     }
 
     return render(request, 'artworks/artwork_detail.html', context)
+
+
+def add_artwork(request):
+    """ Add an artwork to the store """
+    if request.method == 'POST':
+        form = ArtworkForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added artwork!')
+            return redirect(reverse('add_artwork'))
+        else:
+            messages.error(request,
+                          'Failed to add artwork. Please ensure the form is valid.')
+    else:
+        form = ArtworkForm()
+    template = 'artworks/add_artwork.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+ 
