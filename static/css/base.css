@@ -39,6 +39,18 @@ input[name='q']::placeholder {
     min-width: 260px;
 }
 
+.btn-looking {
+    background: #D9E6F3;
+    color: #2F587B;
+    border: #2F587B;
+}
+
+.btn-checkout {
+    background: #2F587B;
+    color: #D9E6F3;
+    border: #D9E6F3;
+}
+
 .add-basket {
     background: #2F587B;
     color: #D9E6F3;
