@@ -19,6 +19,10 @@ footer {
     background-color: #D9E6F3;
 }
 
+input[name='q']::placeholder {
+    color: #D9E6F3;
+}
+
 .logo-font {
     text-transform: uppercase;
     color: #2F587B; /* Bdazzled Blue */
@@ -85,6 +89,61 @@ footer {
 .btt-link, .remove-item  {
     cursor: pointer;
 }
+
+/* ------------------------- Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: #2F5878 /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: #2F5878;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #D9E6F3;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #2F5878;
+    border: 1px solid #2F5878;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: #fff;
+    background-color: #2F5878;
+    border-color: #2F5878;
+}
+
+.allauth-form-inner-content a {
+	color: #17a2b8; /* text-info */
+}
+
 
 /* ------------------------------- bootstrap toasts */
 
