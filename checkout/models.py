@@ -40,9 +40,12 @@ class Orders(models.Model):
     vat = models.DecimalField(max_digits=6,
                               decimal_places=2,
                               null=False, default=0)
-    total = models.DecimalField(max_digits=6,
+    total = models.DecimalField(max_digits=10,
                                 decimal_places=2,
                                 null=False, default=0)
+    grand_total = models.DecimalField(max_digits=10,
+                                      decimal_places=2,
+                                      null=False, default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     original_basket = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False, blank=False,
@@ -59,10 +62,11 @@ class Orders(models.Model):
         Update grand total each time a line item is added,
         accounting for VAT and commission.
         """
-        self.total = self.lineitems.aggregate(Sum('line_total'))['line_total_sum'] or 0
+        self.total = self.lineitems.aggregate(Sum('line_total'))['line_total__sum'] or 0
         self.vat = self.total * settings.VAT_PERCENTAGE / 100
         self.commission = self.total * settings.COMMISSION_PERCENTAGE / 100
         self.delivery = self.total * settings.DELIVERY_PERCENTAGE / 100
+        self.grand_total = self.total + self.delivery + self.vat + self.commission
         self.save()
 
     def save(self, *args, **kwargs):
@@ -79,14 +83,12 @@ class Orders(models.Model):
 
 
 class OrderItems(models.Model):
-    order_number = models.ForeignKey(Orders, null=False, blank=False,
-                                     on_delete=models.CASCADE,
-                                     related_name='lineitems')
-    line_number = models.IntegerField(null=False, blank=False, unique=True)
+    order = models.ForeignKey(Orders, null=False, blank=False,
+                              on_delete=models.CASCADE,
+                              related_name='lineitems')
     artworks = models.ForeignKey(Artworks, null=False,
                                  blank=False,
                                  on_delete=models.CASCADE)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
     quantity = models.IntegerField(default=1)  # for cards, prints, etc
     line_total = models.DecimalField(max_digits=6, decimal_places=2,
                                      null=False,
@@ -97,8 +99,8 @@ class OrderItems(models.Model):
         Override the original save method to set the lineitem total
         and update the order total.
         """
-        self.line_total = self.price * self.quantity
+        self.line_total = self.artworks.price * self.quantity
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.order_number, self.line_number
+        return f'order {self.artworks.title } on order { self.order.order_number }'
