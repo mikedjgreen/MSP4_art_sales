@@ -304,3 +304,5 @@ Discussions on art gallery commission rates proved to be useful, [e.g. Fine Art 
 More technical help on html, css, javascript and python from [w3schools](https://www.w3schools.com/js/default.asp)
 
 Many of the code segments were from [Code Institute](https://codeinstitute.net/)'s tutorials.
+
+As Code Institute's code segments were tailored, so too were Django's, for example [Django form widget](https://github.com/django/django/blob/main/django/forms/templates/django/forms/widgets/clearable_file_input.html)
