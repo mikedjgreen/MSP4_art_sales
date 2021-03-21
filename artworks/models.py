@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from members.models import Members
 
 
 class art_category(models.TextChoices):
@@ -19,7 +20,9 @@ class Artworks(models.Model):
         verbose_name_plural = "Artworks"
 
     title = models.CharField(max_length=254)
-    artist_id = models.IntegerField(blank=False)
+    artist = models.ForeignKey(Members, on_delete=models.SET_NULL,
+                               null=True,
+                               blank=True, related_name='members')
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     sold = models.BooleanField(default=False)
