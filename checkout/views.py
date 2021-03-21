@@ -99,7 +99,8 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # Attempt to prefill the form with any info the user maintains in their profile
+        # Attempt to prefill the form with any info
+        #  the user maintains in their profile
         if request.user.is_authenticated:
             try:
                 profile = Patron.objects.get(user=request.user)
@@ -164,6 +165,14 @@ def checkout_success(request, order_number):
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
+
+    # Before removing the basket items, as checkout success
+    # use artwork items to mark as 'sold'
+    basket = request.session.get('basket', {})
+    for item_id, item_data in basket.items():
+        artwork = Artworks.objects.get(id=item_id)
+        artwork.sold = True
+        artwork.save()
 
     if 'basket' in request.session:
         del request.session['basket']

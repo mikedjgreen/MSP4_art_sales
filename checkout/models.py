@@ -15,7 +15,7 @@ class Orders(models.Model):
 
     class Meta:
         verbose_name_plural = "Orders"
-
+    
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(Patron, on_delete=models.SET_NULL,
                                      null=True,

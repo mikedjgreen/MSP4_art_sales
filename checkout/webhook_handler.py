@@ -129,6 +129,7 @@ class StripeWH_Handler:
                             quantity=item_data,
                         )
                         order_line_item.save()
+                        print("***** orderline artwork ", artwork.title)
             except Exception as e:
                 if order:
                     order.delete()
