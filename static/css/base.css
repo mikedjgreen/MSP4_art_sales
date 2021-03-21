@@ -239,9 +239,21 @@ input[name='q']::placeholder {
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
+        font-size: .8rem;
     }
 
     body {
         height: calc(100vh - 116px);
     }
+
+    .logo-font {
+        font-size: .8rem;
+    }
+
+    .nav-link , .navbar-toggler, .browse-button  {
+        border: 0.25rem;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+    }
+
 }
