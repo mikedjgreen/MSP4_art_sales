@@ -1,0 +1,9 @@
+<p class="my-0 center"><strong>{{ item.artwork.title }}</strong></p>
+<p class="my-0">&pound;{{ item.artwork.price }}</p>
+<a class="remove-item text-danger float-right"
+   id="remove_{{ item.item_id }}">
+    <small>Remove</small>
+</a>
+{% if item.quantity > 1  %}
+    <p class="my-0">Copies: {{ item.quantity }}</p>
+{% endif %}

@@ -256,4 +256,8 @@ input[name='q']::placeholder {
         padding-right: 0.25rem;
     }
 
+    .btn-looking btn-checkout {
+        font-size: 0.9rem !important;
+    }
+
 }

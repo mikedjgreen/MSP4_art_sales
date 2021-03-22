@@ -23,7 +23,32 @@
         <div class="row">
             <div class="col">
                 {% if basket_items %}
-                    <div class="table-responsive rounded">
+                    <div class="d-md-none">
+                        {% for item in basket_items %}
+                            <div class="row">
+                                <div class="col">
+                                    {% include "basket/basket-image.html" %}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col translate-middle">
+                                    {% include "basket/basket-dets.html" %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="row">
+                            <div class="col">
+                                {% include "basket/basket-total.html" %}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                {% include "basket/basket-buttons.html" %}
+                            </div>
+                        </div>
+                    </div>
+<!--  The table works well with medium to large viewports, but not small -->                
+                    <div class="table-responsive rounded d-none d-md-block">
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
                                 <tr>
@@ -88,6 +113,7 @@
                             </tr>
                         </table>
                     </div>
+<!--    End of Table for medium or large viewports -->                    
                 {% else %}
                     <p class="lead mb-5">Your basket is empty.</p>
                     <a href="{% url 'artworks' %}" class="btn btn-outline-black rounded-0 btn-lg btn-looking">
