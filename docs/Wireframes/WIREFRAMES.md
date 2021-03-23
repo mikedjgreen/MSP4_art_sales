@@ -17,7 +17,7 @@
 
 ## WIREFRAMES for MSP4_art_sales
 
-[Return to Readme](../../README.md)
+[Return to Readme](../../README.md#wireframes)
 
 
 ### Site Map
@@ -29,42 +29,42 @@
 ---
 #### Small Viewport
 
-![Home IPhone](/home_iphone.png)
+![Home IPhone](home_iphone.png)
 
 #### Medium Viewport
 
-![Home IPad](/home_ipad.png)
+![Home IPad](home_ipad.png)
 
 #### Large Viewport
 
-![Home lg screen](/home_lg_screen.png)
+![Home lg screen](home_lg_screen.png)
 
 ### Artworks
 ---
 
 #### Small Viewport
 
-![Artworks IPhone](/artworks_iphone.png)
+![Artworks IPhone](artworks_iphone.png)
 
 #### Medium Viewport
 
-![Artworks IPad](/artworks_ipad.png)
+![Artworks IPad](artworks_ipad.png)
 
 #### Large Viewport
 
-![Artworks lg screen](/artworks_lg_screen.png)
+![Artworks lg screen](artworks_lg_screen.png)
 
 ### Basket
 ---
 
 #### Small Viewport
 
-![Basket IPhone](/basket_iphone.png)
+![Basket IPhone](basket_iphone.png)
 
 #### Medium Viewport
 
-![Basket IPad](/basket_ipad.png)
+![Basket IPad](basket_ipad.png)
 
 #### Large Viewport
 
-![Basket lg screen](/basket_lg_screen.png)
+![Basket lg screen](basket_lg_screen.png)

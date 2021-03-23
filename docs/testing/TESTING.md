@@ -7,7 +7,7 @@
 
 ## Testing
 
-[Return to Readme](../../README.md)
+[Return to Readme](../../README.md#testing)
 
 ### Feature testing
 
