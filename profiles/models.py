@@ -30,6 +30,6 @@ def create_or_update_patron(sender, instance, created, **kwargs):
     Create or update the user profile (Patron)
     """
     #if created:
-        Patron.objects.create(user=instance)
+    Patron.objects.create(user=instance)
     # Existing users: just save the profile
     instance.patron.save()
