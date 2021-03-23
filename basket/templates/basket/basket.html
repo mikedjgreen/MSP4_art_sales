@@ -89,10 +89,7 @@
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Basket Total:&pound;{{ total|floatformat:2 }}</strong></h6>
-                                    <h6>Commission:&pound;{{ commission|floatformat:2 }}</h6>
-                                    <h6>V.A.T.: &pound;{{ vat|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Grand Total (inc VAT): &pound;{{ grand_total|floatformat:2 }}</strong></h4>
+                                    {% include "basket/basket-total.html" %}
                                 </td>
                             </tr>
                             <tr>

@@ -24,11 +24,13 @@ def basket_contents(request):
     if total > 0:
         vat = total * Decimal(settings.VAT_PERCENTAGE / 100)
         commission = total * Decimal(settings.COMMISSION_PERCENTAGE / 100)
+        delivery = total * Decimal(settings.DELIVERY_PERCENTAGE / 100)
     else:
         vat = 0
         commission = 0
+        delivery = 0
 
-    grand_total = vat + total + commission
+    grand_total = vat + total + commission + delivery
 
     context = {
         'basket_items': basket_items,
@@ -37,6 +39,8 @@ def basket_contents(request):
         'vat': vat,
         'commission': commission,
         'commission_rate': settings.COMMISSION_PERCENTAGE,
+        'delivery': delivery,
+        'delivery_rate': settings.DELIVERY_PERCENTAGE,
         'grand_total': grand_total,
     }
 
