@@ -28,13 +28,26 @@
 
 #### 1. Artworks programming error
 
-![Artworks Error](/heroku_artworks_debug_error1.jpg)
+![Artworks Error](heroku_artworks_debug_error1.jpg)
 
 Model migration changes had not been implemented on Heroku server.
 
-[Heroku Migrations](/heroku_artworks_debug_error.txt)
+[Heroku Migrations](heroku_artworks_debug_error.txt)
 
-![Artworks error fixed](/heroku_artworks_fixed.jpg)
+![Artworks error fixed](heroku_artworks_fixed.jpg)
+
+#### 2. Server Error (500) upon login
+
+![Server 500 Error](server_500_login_error.jpg)
+
+This was caused by a wayward migration to update production models.
+It cleared the profiles table 'Patron' that had a foreign key relation to alluath's user.
+
+Temporarily set the Patron to be created upon login, regardless.
+
+Then logged in as admin and entered Patron details for  the superuser 'mdjg' to be able to login.
+
+Rolled back the code changes to enable this, and then logged in successfully.
 
 
 ### User Story testing
