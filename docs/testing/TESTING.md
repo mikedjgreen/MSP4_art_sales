@@ -1,6 +1,13 @@
+- [Testing](#testing)
+  * [Feature testing](#feature-testing)
+  * [Bug testing](#bug-testing)
+  * [User Story testing](#user-story-testing)
+
+[TOC](http://ecotrust-canada.github.io/markdown-toc/)
+
 ## Testing
 
-[Return to Readme](README.md)
+[Return to Readme](../../README.md)
 
 ### Feature testing
 
@@ -18,6 +25,17 @@
 
 
 ### Bug testing
+
+#### 1. Artworks programming error
+
+![Artworks Error](/heroku_artworks_debug_error1.jpg)
+
+Model migration changes had not been implemented on Heroku server.
+
+[Heroku Migrations](/heroku_artworks_debug_error.txt)
+
+![Artworks error fixed](/heroku_artworks_fixed.jpg)
+
 
 ### User Story testing
 

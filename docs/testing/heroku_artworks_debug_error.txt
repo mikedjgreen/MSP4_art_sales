@@ -1,0 +1,89 @@
+$ heroku login -i
+
+$ heroku logs -tail --app msp4-art-sales
+
+2021-03-15T09:58:45.706839+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+2021-03-15T09:58:45.706840+00:00 app[web.1]: return self.cursor.execute(sql, params)
+2021-03-15T09:58:45.706841+00:00 app[web.1]: django.db.utils.ProgrammingError: relation "artworks_artworks" does not exist
+2021-03-15T09:58:45.706841+00:00 app[web.1]: LINE 1: ...tworks"."depth", "artworks_artworks"."image" FROM "artworks_...
+2021-03-15T09:58:45.706841+00:00 app[web.1]: ^
+2021-03-15T09:58:45.706841+00:00 app[web.1]:
+
+$ heroku run python3 manage.py showmigrations --app msp4-art-sales
+
+account
+ [ ] 0001_initial
+ [ ] 0002_email_max_length
+admin
+ [ ] 0001_initial
+ [ ] 0002_logentry_remove_auto_add
+ [ ] 0003_logentry_add_action_flag_choices
+artworks
+ [ ] 0001_initial
+ [ ] 0002_auto_20210313_1027 ...
+ 
+ $ heroku run python3 manage.py makemigrations --dry-run --app msp4-art-sales
+ 
+ Running python3 manage.py makemigrations --dry-run on ⬢ msp4-art-sales... up, run.7361 (Free)
+No changes detected
+
+$ heroku run python3 manage.py migrate --plan --app msp4-art-sales   [Basically everything...]
+
+Running python3 manage.py migrate --plan on ⬢ msp4-art-sales... up, run.5861 (Free)
+Planned operations:
+contenttypes.0001_initial
+    Create model ContentType
+    Alter unique_together for contenttype (1 constraint(s))
+auth.0001_initial
+    Create model Permission
+    Create model Group
+    Create model User
+account.0001_initial
+    Create model EmailAddress
+    Create model EmailConfirmation
+account.0002_email_max_length
+    Alter field email on emailaddress
+admin.0001_initial
+    Create model LogEntry
+admin.0002_logentry_remove_auto_add
+    Alter field action_time on logentry
+admin.0003_logentry_add_action_flag_choices
+    Alter field action_flag on logentry
+artworks.0001_initial
+    Create model Artworks
+artworks.0002_auto_20210313_1027
+    Change Meta options on artworks
+contenttypes.0002_remove_content_type_name
+    Change Meta options on contenttype
+    Alter field name on contenttype
+    Raw Python operation
+    Remove field name from contenttype
+auth.0002_alter_permission_name_max_length
+    Alter field name on permission
+auth.0003_alter_user_email_max_length
+    Alter field email on user
+auth.0004_alter_user_username_opts
+    Alter field username on user
+auth.0005_alter_user_last_login_null
+    Alter field last_login on user
+auth.0006_require_contenttypes_0002
+auth.0007_alter_validators_add_error_messages
+    Alter field username on user
+auth.0008_alter_user_username_max_length
+    Alter field username on user
+auth.0009_alter_user_last_name_max_length
+    Alter field last_name on user
+auth.0010_alter_group_name_max_length
+    Alter field name on group
+auth.0011_update_proxy_permissions
+    Raw Python operation ->     Update the content_type of prox…
+auth.0012_alter_user_first_name_max_length
+    Alter field first_name on user
+members.0001_initial
+    Create model Members
+sessions.0001_initial
+    Create model Session
+sites.0001_initial
+    Create model Site
+sites.0002_alter_domain_unique
+    Alter field domain on site

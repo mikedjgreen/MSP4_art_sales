@@ -122,6 +122,8 @@ As a 'patron' could browse their previous orders, a member should be able to bro
 #### Wireframes
 Mobile-first responsiveness screen design.
 
+[Wireframes](docs/Wireframes/WIREFRAMES.md)
+
 Different screen sizes:
 
 Chrome's Inspect emulator |	width	| breakpoint
@@ -250,6 +252,17 @@ In this section, you should mention all of the languages, frameworks, libraries,
 ## Testing
 
 For the sake of brevity, see  [Separate TESTING document](docs/testing/TESTING.md) for testing procedures.
+
+### CSS Validated:
+
+[static/css/base.css](https://jigsaw.w3.org/css-validator/validator?uri=https://sapphire-roundworm-avh837y6.ws-eu03.gitpod.io/#/workspace/MSP4_art_sales/static/css/base.css)
+
+![Valid CSS](http://jigsaw.w3.org/css-validator/images/vcss-blue)
+
+
+[checkout/static/checkout/css/checkout.css](https://jigsaw.w3.org/css-validator/validator?uri=https://sapphire-roundworm-avh837y6.ws-eu03.gitpod.io/#/workspace/MSP4_art_sales/checkout/static/checkout/css/checkout.css)
+![Valid CSS](http://jigsaw.w3.org/css-validator/images/vcss-blue)
+
 
 ---
 ## Deployment
