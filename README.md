@@ -283,13 +283,50 @@ Heroku app name is msp4-art-sales.
 It is connected to a django postgres database service.
 
 >>This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+- Login to [Heroku Dashboard](https://dashboard.heroku.com/apps).
+- Create a New app, in this case app name is [msp4-art-sales](https://dashboard.heroku.com/apps/msp4-art-sales).
+- Add on Heroku Postgres database service.
+- Add Configuration Variables, 'Config Vars', to Heroku app:
+    - AWS_ACCESS_KEY_ID
+    - AWS_S3_REGION_NAME , e.g. 'eu-west-2'
+    - AWS_SECRET_ACCESS_KEY
+    - AWS_STORAGE_BUCKET_NAME
+    - DATABASE_URL, link to postgres database service
+    - EMAIL_HOST_PASS
+    - EMAIL_HOST_USER
+    - SECRET_KEY
+    - STRIPE_PUBLIC_KEY
+    - STRIPE_SECRET_KEY
+    - STRIPE_WH_SECRET, for web hook.
 
->>In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
+ Please note that many of these config vars will be set at different times as the deployment progresses. 
 
->>In addition, if it is not obvious, you should also describe how to run your code locally.
+    
+- ```$pip3 freeze > requirements.txt```
+
+- create a 'Procfile' and save with contents:
+```web: gunicorn msp4_art_sales.wsgi:application```
+
+- Need to amend the application's settings.py to connect to the Postgres database in production:
+```
+ if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    } ...
+```
+
+- Create a superuser ```python3 manage.py createsuperuser ```
+
+- Add the Heroku app name to ALLOWED_HOSTS in settings.py :
+```ALLOWED_HOSTS = ['msp4-art-sales.herokuapp.com', 'localhost']```
+
+It can be assumed that in all deployments to production that future code changes are still needed.
+
+Heroku configuration provides the facility to connect to the development Git Repository.
+Within Heroku's Deploy tab: !['Deploy' tab](docs/heroku_github_deploy.jpg)
+
+
+
 
 
 ### Heroku Production application
@@ -297,6 +334,20 @@ It is connected to a django postgres database service.
 [Run Production version](https://msp4-art-sales.herokuapp.com/)
 
 ### Amazon AWS (S3) for Static and Media files.
+
+
+- Login to the Amazon [AWS](https://aws.amazon.com/) site.
+
+- Need an S3 bucket.
+
+
+
+
+
+
+
+
+Within the settings.py file the following code will allow the app to connect to an Amazon service.
 
 ```
 # Connecting Django to S3
