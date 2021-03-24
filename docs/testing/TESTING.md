@@ -2,6 +2,7 @@
   * [Feature testing](#feature-testing)
   * [Bug testing](#bug-testing)
   * [User Story testing](#user-story-testing)
+  * [Responsiveness](#responsiveness)
 
 [TOC](http://ecotrust-canada.github.io/markdown-toc/)
 
@@ -71,3 +72,16 @@ Rolled back the code changes to enable this, and then logged in successfully.
 #### 7 As a club administrator I would like to enter new works of art as images with details such as price, media and dimensions of the piece
 
 #### 8 As a club administrator I would like an idea of sales commissions in order to distribute funds to activities that will benefit the club
+
+
+### Responsiveness
+
+Using Google's Mobile Friendly Test Facility.
+
+[Mobile Friendly Test](https://search.google.com/test/mobile-friendly?id=cQq8QMNS74JlrS_CK1sQFg)
+
+- ![Mobile Friendly screen shot](mobile_friendly_test.jpg)
+
+A page loading issue raised by Mobile Friendly can be explained by STRIPE blocking robots....
+
+- ![Mobile Friendly Page Loading Issue](mobile-friendly-load-issue.jpg)

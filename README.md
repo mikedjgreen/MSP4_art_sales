@@ -296,6 +296,25 @@ It is connected to a django postgres database service.
 
 [Run Production version](https://msp4-art-sales.herokuapp.com/)
 
+### Amazon AWS (S3) for Static and Media files.
+
+```
+# Connecting Django to S3
+if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+    AWS_S3_REGION_NAME = os.environ.get('AWS_S3_REGION_NAME')
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+```
+
 ---
 ## Credits
 
@@ -314,8 +333,10 @@ I received inspiration for this project from:
 
 Discussions on art gallery commission rates proved to be useful, [e.g. Fine Art Trade Guild](https://www.fineart.co.uk/faq/commission-rates-to-artists-32.aspx)
 
-More technical help on html, css, javascript and python from [w3schools](https://www.w3schools.com/js/default.asp)
+More technical help on html, css, javascript and python from [w3schools](https://www.w3schools.com/js/default.asp).
 
-Many of the code segments were from [Code Institute](https://codeinstitute.net/)'s tutorials.
+The need to resolve various 404, 500 and programming errors was assisted greatly by [StackOverflow](https://stackoverflow.com/)
+
+Many of the code segments were from [Code Institute](https://codeinstitute.net/)'s tutorials, especially the Boutique Ado project walk-through.
 
 As Code Institute's code segments were tailored, so too were Django's, for example [Django form widget](https://github.com/django/django/blob/main/django/forms/templates/django/forms/widgets/clearable_file_input.html)
