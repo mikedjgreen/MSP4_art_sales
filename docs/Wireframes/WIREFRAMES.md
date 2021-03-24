@@ -12,6 +12,10 @@
     + [Small Viewport](#small-viewport-2)
     + [Medium Viewport](#medium-viewport-2)
     + [Large Viewport](#large-viewport-2)
+  * [Checkout](#checkout)
+    + [Small Viewport](#small-viewport-3)
+    + [Medium Viewport](#medium-viewport-3)
+    + [Large Viewport](#large-viewport-3)
 
 [TOC](http://ecotrust-canada.github.io/markdown-toc/)
 
@@ -68,3 +72,17 @@
 #### Large Viewport
 
 ![Basket lg screen](basket_lg_screen.png)
+
+### Checkout
+
+#### Small Viewport
+
+![Checkout IPhone](checkout_iphone.png)
+
+#### Medium Viewport
+
+![Checkout IPad](checkout_ipad.png)
+
+#### Large Viewport
+
+![Checkout lg screen](checkout_lg_screen.png)
