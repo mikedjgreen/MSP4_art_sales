@@ -4,11 +4,12 @@ from .models import Members
 
 class MembersAdmin(admin.ModelAdmin):
     list_display = (
+        'id',
         'full_name',
         'email_address',
         'created_at',
         'bio',
-        'admin_id'
+        'username',
     )
 
     ordering = ('full_name',)

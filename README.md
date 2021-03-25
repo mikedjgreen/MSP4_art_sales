@@ -298,6 +298,7 @@ It is connected to a django postgres database service.
     - STRIPE_PUBLIC_KEY
     - STRIPE_SECRET_KEY
     - STRIPE_WH_SECRET, for web hook.
+    - USE_AWS, value set to True, to trigger AWS S3 bucket configuration.
 
  Please note that many of these config vars will be set at different times as the deployment progresses. 
 

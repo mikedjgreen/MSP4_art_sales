@@ -194,6 +194,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 VAT_PERCENTAGE = 20
 COMMISSION_PERCENTAGE = 5
 DELIVERY_PERCENTAGE = 10
+CLUB_SUBSCRIPTION = 20
 
 # Connecting Django to S3
 if 'USE_AWS' in os.environ:
