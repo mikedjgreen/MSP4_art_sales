@@ -49,7 +49,12 @@
                                 <hr>
                             </div>
                         </div>                                             
-
+                        {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                            <a href="{% url 'edit_member' member.id %}">Edit</a> | 
+                            <a class="text-danger" href="{% url 'delete_member' member.id %}">Delete</a>
+                            </small>
+                        {% endif %}
                 </div>
                 <div class="table-responsive rounded d-none d-md-block">
                 <table  class="table table-sm table-borderless">
@@ -70,6 +75,12 @@
                     </tr>
 
                 </table>
+                    {% if request.user.is_superuser %}
+                        <small class="ml-3">
+                        <a href="{% url 'edit_member' member.id %}">Edit</a> | 
+                        <a class="text-danger" href="{% url 'delete_member' member.id %}">Delete</a>
+                        </small>
+                    {% endif %}
                 </div>
             </div>
         </div>

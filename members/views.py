@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.conf import settings
 from django.contrib import messages
+
 
 from .models import Members
 from .forms import MemberForm
@@ -60,3 +62,32 @@ def edit_member(request, member_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_member(request, member_id):
+    """ Delete a member from the club """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only club admin can do that.')
+        return redirect(reverse('home'))
+
+    member = get_object_or_404(Members, pk=member_id)
+    member.delete()
+    messages.success(request, 'Member deleted!')
+    return redirect(reverse('view_members'))
+
+
+@login_required
+def pay_subs(request, member_id):
+    """  Signed In Member can pay annual club subscription """
+
+    member = get_object_or_404(Members, pk=member_id)
+
+    current_login = {{User.username}}
+    annual_sub = settings.CLUB_SUBSCRIPTION
+
+    context = {
+        "members": member,
+    }
+
+    return render(request, 'members/members.html', context)
