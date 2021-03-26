@@ -42,6 +42,10 @@
                             <div class="card-body pb-0">
                                 <p class="mb-0" >{{ artwork.title }}</p>
                                 <p class="mb-0">{{ artwork.artist }}</p>
+                                {% if current_sorting == 'category_asc' %}
+                                    <p class="mb-0">{{ art_category }}</p>
+                                    <p class="mb-0">{{ artwork.category }}</p> 
+                                {% endif %}
                             </div>
                             <div class="card-footer bg-white pt-0 border-0 text-left">
                                 <div class="row">
@@ -62,6 +66,7 @@
                             </div>   
                         </div>
                     </div>    
+  
                     {% endfor %}
                 </div>
             </div>

@@ -13,6 +13,9 @@ class art_category(models.TextChoices):
     BOOKS = 'BO', _('Books')
     MIXED = 'MX', _('Mixed')
 
+    def __str__(self):
+        return self.label
+
 
 class Artworks(models.Model):
 
@@ -33,7 +36,8 @@ class Artworks(models.Model):
     image_path = models.URLField(max_length=1024, blank=True)
     height = models.DecimalField(max_digits=6, decimal_places=2)
     width = models.DecimalField(max_digits=6, decimal_places=2)
-    depth = models.DecimalField(max_digits=6, decimal_places=2, blank=True)
+    depth = models.DecimalField(max_digits=6, decimal_places=2,
+                                null=True, blank=True)
     image = models.ImageField(blank=True)
 
     def __str__(self):

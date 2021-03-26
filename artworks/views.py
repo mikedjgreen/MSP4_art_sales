@@ -3,7 +3,7 @@ from .models import Artworks
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
-from .forms import ArtworkForm
+from .forms import ArtworkForm, ArtworkEditForm
 
 
 def all_artworks(request):
@@ -66,15 +66,16 @@ def add_artwork(request):
     if request.method == 'POST':
         form = ArtworkForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully added artwork!')
-            return redirect(reverse('add_artwork'))
+            artwork = form.save()
+            messages.success(request, 'Successfully added artwork')
+            return redirect(reverse('artwork_detail', args=[artwork.id]))
         else:
             messages.error(request,
                            'Failed to add artwork.\
                             Please ensure the form is valid.')
     else:
         form = ArtworkForm()
+
     template = 'artworks/add_artwork.html'
     context = {
         'form': form,
@@ -92,16 +93,16 @@ def edit_artwork(request, artwork_id):
 
     artwork = get_object_or_404(Artworks, pk=artwork_id)
     if request.method == 'POST':
-        form = ArtworkForm(request.POST, request.FILES, instance=artwork)
+        form = ArtworkEditForm(request.POST, request.FILES, instance=artwork)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated artwork!')
+            messages.success(request, 'Successfully updated artwork')
             return redirect(reverse('artwork_detail', args=[artwork.id]))
         else:
             messages.error(request, 'Failed to update artwork. \
                                      Please ensure form is valid.')
     else:
-        form = ArtworkForm(instance=artwork)
+        form = ArtworkEditForm(instance=artwork)
         messages.info(request, f'You are editing {artwork.title}')
 
     template = 'artworks/edit_artwork.html'
