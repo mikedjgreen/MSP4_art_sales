@@ -247,6 +247,7 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [Responsiveness](http://ami.responsivedesign.is/) to check site's ability to scale up and down.
 - [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/) to generate secret keys for different environments.
 - [DBdiagram](https://dbdiagram.io/home) to provide the database schema design.
+- [MailDrop](https://maildrop.cc/how-it-works) to provide test mail address for user registration testing.
 ---
 ## Testing
 

@@ -26,7 +26,7 @@
 
 
 ### Bug testing
-
+---
 #### 1. Artworks programming error
 ---
 ![Artworks Error](heroku_artworks_debug_error1.jpg)
@@ -91,10 +91,23 @@ No, one had not.
 
 >2021-03-26T10:20:17.788918+00:00 app[web.1]: 10.11.223.86 - - [26/Mar/2021:10:20:17 +0000] "GET /artworks/29/ HTTP/1.1"**200** 13502 "https://msp4-art-sales.herokuapp.com/artworks/add/" "Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36"
 
+#### 4. No order details displayed on order confirmation.
+---
+
+##### User Story 2 bug
+
+![Order confirmed](user_story2_6.jpg)
+
+##### Resolution
+
+Amended code on checkout model to display order item default
+and appropriate display line on checkout_success page.
+
+![Checkout Success](bug_fix_userstory2.jpg)
 
 
 ### User Story testing
-
+---
 #### 1 As a visitor to the site I would like to view art works for sale
     If I see something I like, I would like to know the price, what it's made of and size of it ( will it 'fit' on my wall or shelf ), as well as it's title and who made it.
 ---
