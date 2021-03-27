@@ -15,7 +15,7 @@ class Orders(models.Model):
 
     class Meta:
         verbose_name_plural = "Orders"
-    
+
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(Patron, on_delete=models.SET_NULL,
                                      null=True,
@@ -62,11 +62,15 @@ class Orders(models.Model):
         Update grand total each time a line item is added,
         accounting for VAT and commission.
         """
-        self.total = self.lineitems.aggregate(Sum('line_total'))['line_total__sum'] or 0
+        self.total = (self.lineitems.aggregate(Sum('line_total'))
+                      ['line_total__sum'] or 0)
         self.vat = self.total * settings.VAT_PERCENTAGE / 100
         self.commission = self.total * settings.COMMISSION_PERCENTAGE / 100
         self.delivery = self.total * settings.DELIVERY_PERCENTAGE / 100
-        self.grand_total = self.total + self.delivery + self.vat + self.commission
+        self.grand_total = (self.total
+                            + self.delivery
+                            + self.vat
+                            + self.commission)
         self.save()
 
     def save(self, *args, **kwargs):
@@ -103,4 +107,4 @@ class OrderItems(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'order {self.artworks.title } on order { self.order.order_number }'
+        return f'{self.artworks} {self.line_total}'
