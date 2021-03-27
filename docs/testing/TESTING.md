@@ -98,8 +98,40 @@ No, one had not.
 #### 1 As a visitor to the site I would like to view art works for sale
     If I see something I like, I would like to know the price, what it's made of and size of it ( will it 'fit' on my wall or shelf ), as well as it's title and who made it.
 ---
+
+Initial view of club's artworks.
+![Artworks page](user_story1_1.jpg)
+
+Individual artwork displaying dimensions of the work.
+![An artwork detail](user_story1_2.jpg)
+
 #### 2 As a patron I would like to buy artworks within my price range and likes
 ---
+Initial artwork sought.
+![Artwork coveted](user_story2_1.jpg)
+
+Artwork successfully added to basket.
+![Artwork added to basket](user_story2_2.jpg)
+
+Artwork in basket with purchase details ready to be purchased.
+![Artwork ready to buy](user_story2_3.jpg)
+
+Purchase details added. Will the purchaser be a one-off, or will they purchase more in the future?
+![Commerce](user_story2_4.jpg)
+Using STRIPE's test [credit card details](https://stripe.com/docs/payments/accept-a-payment#testing).
+
+Purchaser completing order without logging in (a one-off sale).
+![Completing order](user_story2_5.jpg)
+
+Order has succesful feedback and confirmation email sent.
+
+![Order confirmed](user_story2_6.jpg)
+
+- **There is a bug, the order details have not been displayed.**
+
+Now marked as 'Just Sold!' on artworks page.
+![Sold](user_story2_7.jpg)
+
 #### 3 As a frequent patron I would like to keep a record of my purchases with the club
 ---
 #### 4 As a patron I would like to keep a running total of incomplete orders,
