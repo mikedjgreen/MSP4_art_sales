@@ -106,7 +106,7 @@ def checkout(request):
                 profile = Patron.objects.get(user=request.user)
                 order_form = OrderForm(initial={
                     'full_name': profile.user.get_full_name(),
-                    'email': profile.user.email,
+                    'email': profile.default_email,
                     'phone_number': profile.default_phone_number,
                     'country': profile.default_country,
                     'postcode': profile.default_postcode,

@@ -6,6 +6,7 @@ class ProfileAdmin(admin.ModelAdmin):
     list_display = (
             'user',
             'default_phone_number',
+            'default_email',
             'default_country',
             'default_postcode',
             'default_town_or_city',

@@ -13,6 +13,7 @@ class Patron(models.Model):
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     default_phone_number = models.CharField(max_length=20, blank=True)
+    default_email = models.CharField(max_length=80,blank=True)
     default_street_address1 = models.CharField(max_length=80, blank=True)
     default_street_address2 = models.CharField(max_length=80, blank=True)
     default_town_or_city = models.CharField(max_length=40, blank=True)
