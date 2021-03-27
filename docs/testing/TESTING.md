@@ -134,11 +134,76 @@ Now marked as 'Just Sold!' on artworks page.
 
 #### 3 As a frequent patron I would like to keep a record of my purchases with the club
 ---
+
+A 'frequent patron' of the club suggests first registering with the club.
+
+**Registration**
+
+For testing purposes first set up a [dummy maildrop](https://maildrop.cc/inbox/tellulah).
+
+![Register as TellulahBank](register_as_tellulahbank.jpg)
+
+Confirmation email dropped into test mailbox.
+
+![Register 2](register_as_tellulahbank_2.jpg)
+
+
+Pasted confirmation URL from mailbox.
+
+![Register 3](register_as_tellulahbank_3.jpg)
+
+
+Password accepted.
+
+![Register 4](register_as_tellulahbank_4.jpg)
+
+Now logged in, 'frequent patron' has an empty wall and can go for a spree to cover it with pictures.
+
+**Spree**
+
+First order.
+
+![First order](user_story3_1.jpg)
+
+Second Order.
+![Second Order](user_story3_2.jpg)
+
+
+Order History section of Tellulah's profile.
+![Order History](user_story3_3.jpg)
+
+Each order is linked to order confirmation email details.
+![Order Confirmation Detail](user_story3_4.jpg)
+
+
+
+
+
+**Additional Test: Checking normal logged in user cannot access administration**
+
+Logged in as Tellulah tried to access /admin in URL:
+
+![Admin login restricted](user_login_not_admin.jpg)
+
+
+
+
 #### 4 As a patron I would like to keep a running total of incomplete orders,
             including V.A.T.,
             delivery charges (if not collecting)
             and potential commission to the club.
 ---
+
+Every time an artwork is added to the basket, there is a pop-up to inform.
+![Shopping basket toast](user_story4_1.jpg)
+
+Going to 'Secure Checkout' will display a detailed running total.
+
+![Secure Checkout for totals](user_story4_2.jpg)
+
+
+
+
 #### 5 As a club member I would like to purchase my year's club membership subscription remotely
 ---
 #### 6 As a member of the art club, I may like to have a record of my work that sold via the club's site
