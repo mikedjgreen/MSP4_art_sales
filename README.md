@@ -286,7 +286,6 @@ Heroku app name is msp4-art-sales.
 
 It is connected to a django postgres database service.
 
->>This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
 - Login to [Heroku Dashboard](https://dashboard.heroku.com/apps).
 - Create a New app, in this case app name is [msp4-art-sales](https://dashboard.heroku.com/apps/msp4-art-sales).
 - Add on Heroku Postgres database service.
@@ -374,6 +373,15 @@ if 'USE_AWS' in os.environ:
 ---
 ## Credits
 
+### Code
+
+- Many of the code segments were from [Code Institute](https://codeinstitute.net/)'s tutorials, especially the Boutique Ado project walk-through.
+
+- As Code Institute's code segments were tailored, so too were Django's, for example [Django form widget](https://github.com/django/django/blob/main/django/forms/templates/django/forms/widgets/clearable_file_input.html)
+
+- STRIPE code contributions came from their [payment documentation](https://stripe.com/docs/payments/accept-a-payment) and [JavaScript](https://stripe.com/docs/stripe-js).
+
+
 ### Content
 - The text, for better or worse, is the author's work of imagination.
 
@@ -392,7 +400,3 @@ Discussions on art gallery commission rates proved to be useful, [e.g. Fine Art 
 More technical help on html, css, javascript and python from [w3schools](https://www.w3schools.com/js/default.asp).
 
 The need to resolve various 404, 500 and programming errors was assisted greatly by [StackOverflow](https://stackoverflow.com/)
-
-Many of the code segments were from [Code Institute](https://codeinstitute.net/)'s tutorials, especially the Boutique Ado project walk-through.
-
-As Code Institute's code segments were tailored, so too were Django's, for example [Django form widget](https://github.com/django/django/blob/main/django/forms/templates/django/forms/widgets/clearable_file_input.html)

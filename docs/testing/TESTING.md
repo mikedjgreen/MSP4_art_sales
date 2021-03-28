@@ -3,7 +3,10 @@
   * [Bug testing](#bug-testing)
   * [User Story testing](#user-story-testing)
   * [Responsiveness](#responsiveness)
-  * [Python/Django pylint](#python-pylint)
+  * [Python pylint](#python-pylint)
+- [Lighthouse reports](#lighthouse-reports)
+  * [Accessibility: 81](#accessibility--81)
+  * [Best Practices: 93](#best-practices--93)
 
 [TOC](http://ecotrust-canada.github.io/markdown-toc/)
 
@@ -291,3 +294,29 @@ Hence ``` --exclude=migrations``` above.
 There were enough self-inflicted long lines reports, e.g. 
 - [Checkout Report](../pycodestyle/checkout.txt)
 - [Profiles Report](../pycodestyle/profiles.txt)
+
+
+## Lighthouse reports
+
+[Lighthouse Report 28th March 2021](lighthouse_report_1.html)
+
+### Accessibility: 81
+
+Report points to improve [the usage of ARIA](https://developers.google.com/web/fundamentals/accessibility/semantics-aria).
+- Especially an error with non-unique Id, id="user-options".
+-  Heading elements are not in a sequentially-descending order .
+-  \<html> element does not have a [lang] attribute.
+-  List items \<li> are not contained within \<ul> or \<ol> parent elements. 
+
+### Best Practices: 93
+
+Report shows JavasSript has vulnerabilities.
+-  Includes front-end JavaScript libraries with [known security vulnerabilities](https://web.dev/no-vulnerable-libraries/?utm_source=lighthouse&utm_medium=devtools).
+
+
+### Accessibility: 98
+Acted upon Lighthouse Report recommendations.
+- Especialy ARIA Unique ID, set mobile top header ID to 'user-options-mob'.
+- Added lang="en" to \<html> header tag in base page.
+- mobile top header also had \<li> elements without surrounding \<ul> parent element.
+

@@ -72,7 +72,7 @@ def checkout(request):
                         order_item.save()
                 except Artworks.DoesNotExist:
                     messages.error(request, (
-                        "One of the artworks in your basket wasn't found in our database."
+                        "One of the artworks in your basket wasn't found."
                         "Please call us for assistance!")
                     )
                     order.delete()
@@ -87,7 +87,7 @@ def checkout(request):
     else:
         basket = request.session.get('basket', {})
         if not basket:
-            messages.error(request, "There's nothing in your basket at this time")
+            messages.error(request, "There's nothing in your basket")
             return redirect(reverse('artworks'))
 
         current_basket = basket_contents(request)
