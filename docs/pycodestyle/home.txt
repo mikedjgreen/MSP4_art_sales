@@ -1,0 +1,11 @@
+directory home
+checking home/__init__.py
+checking home/admin.py
+checking home/apps.py
+checking home/models.py
+checking home/tests.py
+checking home/urls.py
+checking home/views.py
+directory home/__pycache__
+directory home/templates
+directory home/templates/home

@@ -1,0 +1,17 @@
+directory profiles
+checking profiles/__init__.py
+checking profiles/admin.py
+checking profiles/apps.py
+checking profiles/forms.py
+profiles/forms.py:34:80: E501 line too long (98 > 79 characters)
+checking profiles/models.py
+checking profiles/tests.py
+checking profiles/urls.py
+checking profiles/views.py
+directory profiles/__pycache__
+directory profiles/static
+directory profiles/static/profiles
+directory profiles/static/profiles/css
+directory profiles/static/profiles/js
+directory profiles/templates
+directory profiles/templates/profiles

@@ -3,6 +3,7 @@
   * [Bug testing](#bug-testing)
   * [User Story testing](#user-story-testing)
   * [Responsiveness](#responsiveness)
+  * [Python/Django pylint](#python-pylint)
 
 [TOC](http://ecotrust-canada.github.io/markdown-toc/)
 
@@ -248,3 +249,45 @@ Using Google's Mobile Friendly Test Facility.
 A page loading issue raised by Mobile Friendly can be explained by STRIPE blocking robots....
 
 - ![Mobile Friendly Page Loading Issue](mobile-friendly-load-issue.jpg)
+
+### Python pylint
+---
+There were a number of flagged errors of the type "Class 'Patron' has no 'objects' member".
+
+According to [Stack Overflow](https://stackoverflow.com/questions/58255016/class-has-no-objects-member) this is a warning caused by usual pylint not recognising Django Metaclasses.
+Ensured on gitpod environment that pylint-django was installed, ```pip3 freeze```
+
+- pylint==2.7.2
+- pylint-django==2.4.2
+- pylint-plugin-utils==0.6
+
+The other main problem is 'line too long', flake8(E501) errors.
+Again [Stack Overflow](https://stackoverflow.com/questions/48881196/how-to-split-up-a-long-f-string-in-python#48881390) explains.
+
+#### pep8 checks
+
+> pep8 has been renamed to pycodestyle (GitHub issue #466)
+> Use of the pep8 tool will be removed in a future release.
+> Please install and use `pycodestyle` instead.
+
+```/workspace/MSP4_art_sales $ ls -1```
+
+gives directories ('apps') :
+- artworks ```pycodestyle -v --exclude=migrations artworks > docs/pycodestyle/artworks.txt```
+- basket ```pycodestyle -v --exclude=migrations checkout > docs/pycodestyle/checkout.txt```
+- checkout ```pycodestyle -v --exclude=migrations checkout > docs/pycodestyle/checkout.txt```
+- custom_storages.py ```pycodestyle -v custom_storages.py > docs/pycodestyle/custom_storages.txt```
+- home ```pycodestyle -v --exclude=migrations home > docs/pycodestyle/home.txt```
+- manage.py ```pycodestyle -v manage.py > docs/pycodestyle/manage.txt```
+- members ```pycodestyle -v --exclude=migrations members > docs/pycodestyle/members.txt```
+- msp4_art_sales ```pycodestyle -v --exclude=migrations msp4_art_sales > docs/pycodestyle/msp4_art_sales.txt```
+- profiles ```pycodestyle -v --exclude=migrations profiles > docs/pycodestyle/profiles.txt```
+- templates ```pycodestyle -v --exclude=migrations templates > docs/pycodestyle/templates.txt```
+
+There has been discussion in Code Institute's SLACK chat site whether to include Django's generated python files when checking with python linter.
+I agree that it serves no purpose to attempt to check and alter migration files, as the long lines reported could improve migration's efficiency.
+Hence ``` --exclude=migrations``` above.
+
+There were enough self-inflicted long lines reports, e.g. 
+- [Checkout Report](../pycodestyle/checkout.txt)
+- [Profiles Report](../pycodestyle/profiles.txt)

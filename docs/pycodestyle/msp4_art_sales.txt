@@ -1,0 +1,7 @@
+directory msp4_art_sales
+checking msp4_art_sales/__init__.py
+checking msp4_art_sales/asgi.py
+checking msp4_art_sales/settings.py
+checking msp4_art_sales/urls.py
+checking msp4_art_sales/wsgi.py
+directory msp4_art_sales/__pycache__

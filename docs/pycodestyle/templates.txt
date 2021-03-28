@@ -1,0 +1,11 @@
+directory templates
+directory templates/allauth
+directory templates/allauth/account
+directory templates/allauth/account/snippets
+directory templates/allauth/account/messages
+directory templates/allauth/account/email
+directory templates/allauth/socialaccount
+directory templates/allauth/socialaccount/snippets
+directory templates/allauth/socialaccount/messages
+directory templates/includes
+directory templates/includes/toasts

@@ -1,0 +1,17 @@
+directory artworks
+checking artworks/__init__.py
+checking artworks/admin.py
+checking artworks/apps.py
+checking artworks/forms.py
+checking artworks/models.py
+checking artworks/models_copy.py
+checking artworks/tests.py
+checking artworks/urls.py
+checking artworks/views.py
+checking artworks/views_copy.py
+checking artworks/widgets.py
+directory artworks/__pycache__
+directory artworks/fixtures
+directory artworks/templates
+directory artworks/templates/artworks
+directory artworks/templates/artworks/custom_widget_templates

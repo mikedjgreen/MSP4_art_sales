@@ -264,6 +264,9 @@ For the sake of brevity, see  [Separate TESTING document](docs/testing/TESTING.m
 
 ![Valid CSS](http://jigsaw.w3.org/css-validator/images/vcss-blue)
 
+### Python/Django pylint:
+
+Checks can be found in [separate TESTING document](docs/testing/TESTING.md#python-pylint)
 
 ---
 ## Deployment

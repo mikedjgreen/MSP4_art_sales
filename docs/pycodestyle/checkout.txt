@@ -1,0 +1,28 @@
+directory checkout
+checking checkout/__init__.py
+checking checkout/admin.py
+checking checkout/apps.py
+checking checkout/forms.py
+checking checkout/models.py
+checking checkout/signals.py
+checking checkout/test_forms.py
+checking checkout/test_models.py
+checking checkout/test_views.py
+checking checkout/tests.py
+checking checkout/urls.py
+checking checkout/views.py
+checking checkout/webhook_handler.py
+checkout/webhook_handler.py:73:80: E501 line too long (80 > 79 characters)
+checkout/webhook_handler.py:74:80: E501 line too long (80 > 79 characters)
+checkout/webhook_handler.py:105:80: E501 line too long (107 > 79 characters)
+checkout/webhook_handler.py:141:80: E501 line too long (93 > 79 characters)
+checking checkout/webhooks.py
+checkout/webhooks.py:43:80: E501 line too long (86 > 79 characters)
+directory checkout/__pycache__
+directory checkout/static
+directory checkout/static/checkout
+directory checkout/static/checkout/css
+directory checkout/static/checkout/js
+directory checkout/templates
+directory checkout/templates/checkout
+directory checkout/templates/checkout/confirmation_emails
