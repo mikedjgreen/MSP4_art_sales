@@ -84,9 +84,11 @@
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <a href="{% url 'add_artwork' %}" class="dropdown-item">Add Artwork</a>
+                                    <a href="{% url 'sold_artwork' %}" class="dropdown-item">Artwork Sold</a>
                                     <a href="{% url 'view_members' %}" class="dropdown-item">Members</a>
                                     <a href="{% url 'commissions' %}" class="dropdown-item">Commissions</a>
                                 {% endif %}
+                                <a href="{% url 'my_sales' %}" class="dropdown-item">My Sold Artwork</a>
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}

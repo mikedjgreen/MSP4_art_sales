@@ -125,3 +125,35 @@ def delete_artwork(request, artwork_id):
     artwork.delete()
     messages.success(request, 'Artwork deleted!')
     return redirect(reverse('artworks'))
+
+
+@login_required
+def sold_artwork(request):
+    """ Query on sold artworks """
+
+    sold = Artworks.objects.filter(sold=True)
+    sold_count = sold.count()
+
+    template = 'artworks/sold_artwork.html'
+    context = {
+        'artworks': sold,
+        'count': sold_count,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def my_sales(request):
+    """ Query on sold artworks for a logged in member """
+
+    sold = Artworks.objects.filter(sold=True)
+    usrnm = request.user.username
+
+    template = 'artworks/my_sales.html'
+    context = {
+        'artworks': sold,
+        'username': usrnm,
+    }
+
+    return render(request, template, context)
