@@ -4,7 +4,7 @@ from django.shortcuts import (
 from django.contrib import messages
 from django.conf import settings
 from django.views.decorators.http import require_POST
-
+from django.contrib.auth.decorators import login_required
 from .forms import OrderForm
 from .models import Orders, OrderItems
 
@@ -180,6 +180,21 @@ def checkout_success(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def commissions(request):
+    """
+    Extract commission details from past orders
+    """
+    orders = Orders.objects.all()
+
+    template = 'checkout/commissions.html'
+    context = {
+        'order': orders,
     }
 
     return render(request, template, context)

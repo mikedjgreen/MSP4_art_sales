@@ -101,3 +101,17 @@
 #### Large Viewport
 
 ![Checkout lg screen](checkout_lg_screen.png)
+
+
+### My Profile
+#### Small Viewport
+
+![Profile IPhone](profile_iphone.png)
+
+#### Medium Viewport
+
+![Profile IPad](profile_ipad.png)
+
+#### Large Viewport
+
+![Profile lg screen](profile_lg_screen.png)

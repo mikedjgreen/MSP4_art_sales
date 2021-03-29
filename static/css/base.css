@@ -15,10 +15,6 @@ body {
     font-family: "Gudea","Roboto", sans-serif;
 }
 
-footer {
-    background-color: #D9E6F3;
-}
-
 input[name='q']::placeholder {
     color: #D9E6F3;
 }
