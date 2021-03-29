@@ -58,6 +58,21 @@
 
 ![Artworks lg screen](artworks_lg_screen.png)
 
+### Artwork Details
+
+#### Small Viewport
+
+![Art Details IPhone](artdets_iphone.png)
+
+#### Medium Viewport
+
+![Art Details IPad](artdets_ipad.png)
+
+#### Large Viewport
+
+![Art Details Large](artdets_lg_screen.png)
+
+
 ### Basket
 ---
 

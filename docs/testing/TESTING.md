@@ -7,6 +7,7 @@
 - [Lighthouse reports](#lighthouse-reports)
   * [Accessibility: 81](#accessibility--81)
   * [Best Practices: 93](#best-practices--93)
+  * [Accessibility: 98](#accessibility--98)
 
 [TOC](http://ecotrust-canada.github.io/markdown-toc/)
 
@@ -240,6 +241,14 @@ Checked artwork (id 29) within admin:
 
 #### 8 As a club administrator I would like an idea of sales commissions in order to distribute funds to activities that will benefit the club
 ---
+
+Initially commissions can be viewed by a superuser via the admin screens, Orders:
+
+- ![Commissions via Admin](user_story8_admin.jpg)
+
+Not ideal. Sub totals for commission and price would be useful.
+Reporting by a date grouping would be informative.
+
 
 ### Responsiveness
 ---

@@ -253,6 +253,21 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 For the sake of brevity, see  [Separate TESTING document](docs/testing/TESTING.md) for testing procedures.
 
+### HTML Validated
+
+- [Artworks](https://validator.w3.org/nu/?doc=https://msp4-art-sales.herokuapp.com/artworks)
+
+- [Basket](https://validator.w3.org/nu/?doc=https://msp4-art-sales.herokuapp.com/basket)
+
+- [Checkout](https://validator.w3.org/nu/?doc=https://msp4-art-sales.herokuapp.com/checkout)
+
+- [Home](https://validator.w3.org/nu/?doc=https://msp4-art-sales.herokuapp.com/)
+
+- [Members](https://validator.w3.org/nu/?doc=https://msp4-art-sales.herokuapp.com/members)
+
+- [Profile](https://validator.w3.org/nu/?doc=https://msp4-art-sales.herokuapp.com/profile)
+
+
 ### CSS Validated:
 
 [static/css/base.css](https://jigsaw.w3.org/css-validator/validator?uri=https://sapphire-roundworm-avh837y6.ws-eu03.gitpod.io/#/workspace/MSP4_art_sales/static/css/base.css)
