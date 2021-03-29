@@ -17,7 +17,7 @@
 
 ### Feature testing
 
-#### 1  a remote API to recieve a patron's payments by credit card, securely [STRIPE](https://stripe.com/gb).
+#### 1  a remote API to receive a patron's payments by credit card, securely [STRIPE](https://stripe.com/gb).
 
 #### 2  using the same payment feature, allow club members to pay their annual subscription easily.
 
@@ -226,6 +226,23 @@ Going to 'Secure Checkout' will display a detailed running total.
 ---
 #### 6 As a member of the art club, I may like to have a record of my work that sold via the club's site
 ---
+
+Firstly register a member as a valid user login to the club.
+
+- ![Register Tarquin](register_tarquin.jpg)
+
+- ![Register Confirm](register_tarquin_2.jpg)
+
+- ![Tarquin logged in](register_tarquin_3.jpg)
+
+Now that Tarquin can log into the club's website, he can view his sold work.
+
+- ![Dropdown menu for member](user_story6_1.jpg)
+
+A page displaying the logged in member's sold works.
+
+- ![Sold works](user_story6_2.jpg)
+
 #### 7 As a club administrator I would like to enter new works of art as images with details such as price, media and dimensions of the piece
 ---
 From Heroku logs :
@@ -248,6 +265,15 @@ Initially commissions can be viewed by a superuser via the admin screens, Orders
 
 Not ideal. Sub totals for commission and price would be useful.
 Reporting by a date grouping would be informative.
+
+- ![Commissions summary page](user_story8_1.jpg)
+Sub totals are still not being displayed.
+
+Access to commission summary is via super user login only.
+- ![Access to commissions](user_story8_2.jpg)
+
+Smaller screens have an abridged version of the table.
+- ![Commission on smaller screen](user_story8_3.jpg)
 
 
 ### Responsiveness
