@@ -223,6 +223,23 @@ There will be progressive disclosure of the artworks, from gallery thumbnail ima
 
 - A blog for comments of artworks displayed, club activities and possible commission ideas and offers.
 
+#### Features revealed by testing to need improvement.
+
+- Feature 1: artwork sale could email confirmation to wrong email address.
+
+- Feature 2: currently a logged in member can indicate intentions to pay their annual subscription. The functionality to pass that intention to STRIPE payments has not been implemented.
+
+- Feature 3.1: artwork searches could be extended to artist name and classification.
+
+- Feature 3.2: art category display could be more 'friendly'.
+
+- User story 8: although sales commissions can be displayed, not totals are display. Ability to download report would be nice.
+
+- Feature 4: an email confirmation of paid subscriptions cannot be made.
+
+    Problem with STRIPE's [web hook configuration](https://stripe.com/docs/webhooks).
+
+- Feature 5:  at the moment paid club subscriptions cannot be viewed
 
 
 ---
@@ -237,7 +254,6 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [JQuery](https://jquery.com) to simplify DOM manipulation.
 - [Python 3](https://www.python.org/about/)    
     - Programming language used to interact with a database and framework.
-    - [Docstring PEP 257](https://www.python.org/dev/peps/pep-0257/) documentation convention followed.
 - [Django Framework](https://www.djangoproject.com/start/overview/)
     - [Authentication system](https://django-allauth.readthedocs.io/en/latest/installation.html) 
 - [Stripe Payments](https://stripe.com/gb)

@@ -18,8 +18,8 @@
 
 ### Feature testing
 
-#### 1  a remote API to receive a patron's payments by credit card, securely [STRIPE](https://stripe.com/gb).
-
+#### 1  A remote API to receive a patron's payments by credit card, securely [STRIPE](https://stripe.com/gb).
+---
 Adding an artwork to  the basket.
 - ![Feature 1 1](feature1_1.jpg)
 Confirming contents of basket and prompting for checkout.
@@ -38,9 +38,9 @@ Buyer checking order details.
 - ![Feature 1 6](feature1_6.jpg)
 
 #### 2  using the same payment feature, allow club members to pay their annual subscription easily.
-
+---
 #### 3  a query and classification of artworks that allows easy browsing of selected images and their details.
-
+---
 Initial artwork page is 'All Artworks'.
 - ![Feature 3 1](feature3_1.jpg)
 Drop down menu of sorting views.
@@ -62,11 +62,37 @@ Using search for part of artwork title.
 - ![Feature 3 9](feature3_9.jpg)
 
 #### 4  an email confirmation of sale and paid subscription.
+---
+
+
+- ![Feature 4 1](feature4_1.jpg)
+
+
+Unfortunately Heroku logs returns 404 errors from STRIPE's web hooks.
+```
+2021-03-30T17:45:35.183154+00:00 app[web.1]: 10.38.28.219 - - [30/Mar/2021:17:45:35 +0000] "POST /checkout/WH/ HTTP/1.1" 404 9135 "-" "Stripe/1.0 (+https://stripe.com/docs/webhooks)"
+2021-03-30T17:46:38.135855+00:00 heroku[router]: at=info method=POST path="/checkout/WH/" host=msp4-art-sales.herokuapp.com request_id=4d41deda-bf1f-4e58-825f-8ca458886021 fwd="54.187.205.235" dyno=web.1 connect=1ms service=16ms status=404 bytes=9404 protocol=https
+2021-03-30T17:46:38.137319+00:00 app[web.1]: 10.32.235.158 - - [30/Mar/2021:17:46:38 +0000] "POST /checkout/WH/ HTTP/1.1" 404 9135 "-" "Stripe/1.0 (+https://stripe.com/docs/webhooks)
+```
+
 
 #### 5  a secure login to allow a logged in member or patron to view their previous orders, paid subscriptions, and a club member's sold works.
+---
+- User story 3 shows that a logged in member or patron can view their artworks order history.
+![Order History](user_story3_3.jpg)
+- User story 6 shows that a member can view their sold works.
+- ![Sold works](user_story6_2.jpg)
 
+**At the moment paid club subscriptions cannot be viewed._**
 
-#### 6  a shopping basket of selected works with a running total of price, VAT and commision due.
+#### 6  a shopping basket of selected works with a running total of price, VAT and commission due.
+---
+
+This has been covered by user stories 2 and 3.
+
+- ![Artwork added to basket](user_story2_2.jpg)
+
+- ![First order](user_story3_1.jpg)
 
 
 ### Bug testing
@@ -263,6 +289,30 @@ Going to 'Secure Checkout' will display a detailed running total.
 
 #### 5 As a club member I would like to purchase my year's club membership subscription remotely
 ---
+
+A logged in member has the option to indicate they are ready to pay their club subscription.
+- ![Subscription 1](user_story5_0.jpg)
+
+The first subscription page displays the member's details and an option to select to pay the displayed annual subscription (£20).
+
+- ![Subscription 1](user_story5_1.jpg)
+
+The member is presented with a short form to indicate the year of subscription.
+The other fields should already be filled with the club subscription rate taken from settings, and the logged in username.
+
+- ![Subscription 1](user_story5_4.jpg)
+
+The only feedback from this, at present, is a toast message stating the intent was successful.
+- ![Subscription 1](user_story5_2.jpg)
+
+Administrators [../admin] can inspect that the meember intends to pay.
+
+- ![Subscription 1](user_story5_3.jpg)
+
+**Currently that is as far as the functionality goes.**
+
+
+
 #### 6 As a member of the art club, I may like to have a record of my work that sold via the club's site
 ---
 
