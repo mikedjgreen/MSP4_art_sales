@@ -8,6 +8,7 @@
   * [Accessibility: 81](#accessibility--81)
   * [Best Practices: 93](#best-practices--93)
   * [Accessibility: 98](#accessibility--98)
+  * [Performance: 63](#performance--63)
 
 [TOC](http://ecotrust-canada.github.io/markdown-toc/)
 
@@ -343,11 +344,13 @@ Report points to improve [the usage of ARIA](https://developers.google.com/web/f
 -  \<html> element does not have a [lang] attribute.
 -  List items \<li> are not contained within \<ul> or \<ol> parent elements. 
 
+
 ### Best Practices: 93
 
 Report shows JavasSript has vulnerabilities.
 -  Includes front-end JavaScript libraries with [known security vulnerabilities](https://web.dev/no-vulnerable-libraries/?utm_source=lighthouse&utm_medium=devtools).
 
+-![Lighthouse Report Best Practice](lighthouse_best_practices.jpg)
 
 ### Accessibility: 98
 Acted upon Lighthouse Report recommendations.
@@ -355,3 +358,14 @@ Acted upon Lighthouse Report recommendations.
 - Added lang="en" to \<html> header tag in base page.
 - mobile top header also had \<li> elements without surrounding \<ul> parent element.
 
+-![Lighthouse Report Accessibity](lighthouse_accessibility.jpg)
+
+### SEO: 100
+Search Engine Optimisation.
+
+-![Lighthouse Report SEO](lighthouse_seo.jpg)
+
+### Performance: 63
+The CHROME Developer Lighthouse Report advised running incognito to achieve results, as Chrome has extensions that impaired performace.
+
+-![Lighthouse Report Performance](lighthouse_performance.jpg)
