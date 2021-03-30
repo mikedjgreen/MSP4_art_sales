@@ -24,7 +24,7 @@
 
 
 
-# MSP4 art sales
+# [MSP4 art sales](https://github.com/mikedjgreen/MSP4_art_sales)
 
 [Code Institute's](https://codeinstitute.net/) fourth milestone project.
 
@@ -203,7 +203,7 @@ There will be progressive disclosure of the artworks, from gallery thumbnail ima
 
 
 ### Existing Features
-- Feature 1 - a remote API to recieve a patron's payments by credit card, securely [STRIPE](https://stripe.com/gb).
+- Feature 1 - a remote API to receive a patron's payments by credit card, securely [STRIPE](https://stripe.com/gb).
 
 - Feature 2 - using the same payment feature, allow club members to pay their annual subscription easily.
 
@@ -286,16 +286,109 @@ Checks can be found in [separate TESTING document](docs/testing/TESTING.md#pytho
 ---
 ## Deployment
 
-Developed on GitPod using git and GitHub.
-Selected Repository : mikedjgreen/MSP4_art_sales
-Generated from:[Code Institute template]( https://github.com/Code-Institute-Org/gitpod-full-template)
+
+### Local Github (Development)
+- Developed on GitPod using Git and GitHub.
+- Created Repository : mikedjgreen/MSP4_art_sales
+- Generated from:[Code Institute template]( https://github.com/Code-Institute-Org/gitpod-full-template)
+
+### Clone my application
+On a terminal prompt:
+
+```git clone https://github.com/mikedjgreen/MSP4_art_sales```
+
+- ![Example Git Clone](docs/deploy/gitclone.jpg)
 
 
-### local application run
+
+#### Creating an env.py file
+
+Environment variables needed by the server application need to be recorded.
+
+```
+import os
+
+os.environ.setdefault("SECRET_KEY", "***************")
+os.environ.setdefault("DEVELOPMENT","True")
+os.environ.setdefault("STRIPE_PUBLIC_KEY",  "Your Stripe Public key"
+os.environ.setdefault("STRIPE_SECRET_KEY", "Your Stripe Secret key"
+os.environ.setdefault("STRIPE_WH_SECRET", "Your Stripe WebHook_Secret key"
+
+````
+
+#### Creating file .gitignore
+
+The file above contains sensitive keys and passwords, so need to be ignored by GitHub's push.
+
+```
+core.Microsoft*
+core.mongo*
+core.python*
+env.py
+__pycache__/
+*.py[cod]
+*.sqlite3
+```
+
+#### Initial Application set up.
+
+The cloned requirements.txt file provides the list of packages to install locally to run application.
+
+``` pip3 install -r requirements.txt ```
+
+
+#### create superuser
+
+``` python3 manage.py createsuperuser ```
+
+
+#### First commit to github
+
+```git remote -v```
+
+#### Authentication system
+
+```pip3 install django-allauth```
+
+[Allauth documentation](https://django-allauth.readthedocs.io/en/latest/installation.html)
+
+A list of all pip3 installs made in the development environment can be found [here](docs/deploy/installs.txt).
+
+#### When new apps are added, need to migrate
+
+``` python3 manage.py makemigrations --dry-run ```  This shows what need to be done.
+
+``` python3 manage.py makemigrations ```  This makes the migration files indicated by --dry-run.
+
+``` python3 manage.py migrate --plan ``` This displays the migrations about to be made.
+
+``` python3 manage.py migrate``` This enacts the migrations, creating and altering tables on local database, db.sqlite3.
+
+#### Requirements and Procfile
+
+These will be needed to run Heroku's application, once github has 'pushed' to the Heroku production environment.
+
+- ```pip3 freeze > requirements.txt```
+
+- create a 'Procfile' and save with contents:
+```web: gunicorn msp4_art_sales.wsgi:application```
+
+- Need to amend the application's settings.py to connect to the Postgres database in production:
+```
+ if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    } ...
+```
+
+
+#### Local application run
 
     ```python3 manage.py runserver```
     
 ### Initial Heroku App Creation
+
+Login to [Heroku](https://id.heroku.com/login)
 
 Heroku app name is msp4-art-sales.
 
@@ -303,7 +396,8 @@ It is connected to a django postgres database service.
 
 - Login to [Heroku Dashboard](https://dashboard.heroku.com/apps).
 - Create a New app, in this case app name is [msp4-art-sales](https://dashboard.heroku.com/apps/msp4-art-sales).
-- Add on Heroku Postgres database service.
+- Add on Heroku Postgres database service via 'Resources' tab
+     ![Heroku Resources tab](docs/deploy/heroku_resources.jpg)
 - Add Configuration Variables, 'Config Vars', to Heroku app:
     - AWS_ACCESS_KEY_ID
     - AWS_S3_REGION_NAME , e.g. 'eu-west-2'
@@ -320,30 +414,20 @@ It is connected to a django postgres database service.
 
  Please note that many of these config vars will be set at different times as the deployment progresses. 
 
+
+Heroku configuration provides the facility to connect to the development Git Repository.
+Within Heroku's Deploy tab:
+- !['Deploy' tab](docs/deploy/heroku_github_deploy.jpg)
+
+The first ```git push``` from development's github repository will provide the 'requirements.txt' and 'Procfile' files necessary for the production service to run.
     
-- ```$pip3 freeze > requirements.txt```
-
-- create a 'Procfile' and save with contents:
-```web: gunicorn msp4_art_sales.wsgi:application```
-
-- Need to amend the application's settings.py to connect to the Postgres database in production:
-```
- if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    } ...
-```
 
 - Create a superuser ```python3 manage.py createsuperuser ```
 
 - Add the Heroku app name to ALLOWED_HOSTS in settings.py :
 ```ALLOWED_HOSTS = ['msp4-art-sales.herokuapp.com', 'localhost']```
 
-It can be assumed that in all deployments to production that future code changes are still needed.
-
-Heroku configuration provides the facility to connect to the development Git Repository.
-Within Heroku's Deploy tab: !['Deploy' tab](docs/heroku_github_deploy.jpg)
-
+It can be assumed that in all deployments to production future code changes are still needed.
 
 
 
@@ -352,19 +436,18 @@ Within Heroku's Deploy tab: !['Deploy' tab](docs/heroku_github_deploy.jpg)
 
 [Run Production version](https://msp4-art-sales.herokuapp.com/)
 
-### Amazon AWS (S3) for Static and Media files.
+#### Amazon AWS (S3) for Static and Media files.
 
 
 - Login to the Amazon [AWS](https://aws.amazon.com/) site.
 
 - Need an S3 bucket.
 
+- ![S3 Bucket](docs/deploy/AWS_bucket.jpg)
 
+- Need the bucket to hold Media and Static objects.
 
-
-
-
-
+- ![S3 objects](docs/deploy/AWS_bucket_objects.jpg)
 
 Within the settings.py file the following code will allow the app to connect to an Amazon service.
 
