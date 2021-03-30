@@ -20,6 +20,23 @@
 
 #### 1  a remote API to receive a patron's payments by credit card, securely [STRIPE](https://stripe.com/gb).
 
+Adding an artwork to  the basket.
+- ![Feature 1 1](feature1_1.jpg)
+Confirming contents of basket and prompting for checkout.
+- ![Feature 1 2](feature1_2.jpg)
+Checkout order completion.
+- ![Feature 1 3](feature1_3.jpg)
+Checkout success.
+
+** Anomaly found: email address? **
+- ![Feature 1 4](feature1_4.jpg)
+Buyer checking their profile for order. 
+** No email address **
+- ![Feature 1 5](feature1_5.jpg)
+Buyer checking order details.
+** Again informing buyer of email confirmation to wrong address**
+- ![Feature 1 6](feature1_6.jpg)
+
 #### 2  using the same payment feature, allow club members to pay their annual subscription easily.
 
 #### 3  a query and classification of artworks that allows easy browsing of selected images and their details.
