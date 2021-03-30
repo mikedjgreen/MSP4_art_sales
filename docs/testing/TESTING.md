@@ -28,22 +28,43 @@ Checkout order completion.
 - ![Feature 1 3](feature1_3.jpg)
 Checkout success.
 
-** Anomaly found: email address? **
+**Anomaly found: email address?**
 - ![Feature 1 4](feature1_4.jpg)
 Buyer checking their profile for order. 
-** No email address **
+**No email address**
 - ![Feature 1 5](feature1_5.jpg)
 Buyer checking order details.
-** Again informing buyer of email confirmation to wrong address**
+**Again informing buyer of email confirmation to wrong address**
 - ![Feature 1 6](feature1_6.jpg)
 
 #### 2  using the same payment feature, allow club members to pay their annual subscription easily.
 
 #### 3  a query and classification of artworks that allows easy browsing of selected images and their details.
 
+Initial artwork page is 'All Artworks'.
+- ![Feature 3 1](feature3_1.jpg)
+Drop down menu of sorting views.
+- ![Feature 3 2](feature3_2.jpg)
+Display by ascending price.
+- ![Feature 3 3](feature3_3.jpg)
+Display in artist order.
+- ![Feature 3 4](feature3_4.jpg)
+Display by category.
+**Category codes, not 'friendly names'**.
+- ![Feature 3 5](feature3_5.jpg)
+Using query search to look for a word in either title or description.
+- ![Feature 3 6](feature3_6.jpg)
+Searched word contained in artwork description.
+- ![Feature 3 7](feature3_7.jpg)
+Using search for part of artwork title.
+- ![Feature 3 8](feature3_8.jpg)
+**Cannot search for artist with query**
+- ![Feature 3 9](feature3_9.jpg)
+
 #### 4  an email confirmation of sale and paid subscription.
 
 #### 5  a secure login to allow a logged in member or patron to view their previous orders, paid subscriptions, and a club member's sold works.
+
 
 #### 6  a shopping basket of selected works with a running total of price, VAT and commision due.
 
