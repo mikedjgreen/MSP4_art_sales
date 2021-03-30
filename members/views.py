@@ -97,19 +97,20 @@ def pay_subs(request):
 @login_required
 def add_subs(request):
     """ Add a subscription for a member """
-
+    usrnm = request.user.username
+    rate = settings.CLUB_SUBSCRIPTION
     if request.method == 'POST':
         form = SubsForm(request.POST)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully added annual subscription')
-            return redirect(reverse('members'))
+            return redirect(reverse('pay_subs'))
         else:
-            messages.error(request,
-                           'Failed to add subscription.\
-                            Please ensure the form is valid.')
+            sm_msg = "Failed to add subscription. Please ensure form is valid."
+            messages.error(request, sm_msg)
     else:
-        form = SubsForm()
+        data = {'username': usrnm, 'paid': rate}
+        form = SubsForm(data)
 
     template = 'members/add_subs.html'
     context = {

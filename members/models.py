@@ -24,18 +24,16 @@ class Subs(models.Model):
     class Meta:
         verbose_name_plural = "Subs"
 
-    year = models.IntegerField(blank=False, default=2021)
+    year = models.IntegerField(blank=False, help_text='2021 onwards')
     username = models.CharField(max_length=254, blank=False)
     paid = models.DecimalField(max_digits=6, decimal_places=2)
     date_paid = models.DateField(auto_now_add=True)
 
     def save(self, *args, **kwargs):
         """
-        Override the original save method to set paid subscription
-        and the current year.
+        Override the original save method to set paid subscription.
         """
         self.paid = settings.CLUB_SUBSCRIPTION
-        self.year = TruncYear(Now())
         super().save(*args, **kwargs)
 
     def __str__(self):

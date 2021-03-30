@@ -19,7 +19,9 @@ class SubsForm(forms.ModelForm):
 
     class Meta:
         model = Subs
-        fields = '__all__'
+        fields = ('year',
+                  'username',
+                  'paid',)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
