@@ -346,11 +346,6 @@ The cloned requirements.txt file provides the list of packages to install locall
 
 ```git remote -v```
 
-#### Authentication system
-
-```pip3 install django-allauth```
-
-[Allauth documentation](https://django-allauth.readthedocs.io/en/latest/installation.html)
 
 A list of all pip3 installs made in the development environment can be found [here](docs/deploy/installs.txt).
 

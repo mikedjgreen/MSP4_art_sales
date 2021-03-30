@@ -23,6 +23,7 @@ input[name='q']::placeholder {
     text-transform: uppercase;
     color: #2F587B; /* Bdazzled Blue */
     font-size: 1.5rem;
+    padding-top: 5px;
 }
 
 .main-logo-link {
