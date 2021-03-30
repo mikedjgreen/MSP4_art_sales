@@ -1,7 +1,5 @@
 from django.db import models
 from django.conf import settings
-from django.db.models.functions import Now
-from django.db.models.functions import TruncYear
 
 
 class Members(models.Model):
