@@ -233,13 +233,13 @@ There will be progressive disclosure of the artworks, from gallery thumbnail ima
 
 - Feature 3.2: art category display could be more 'friendly'.
 
-- User story 8: although sales commissions can be displayed, not totals are display. Ability to download report would be nice.
-
 - Feature 4: an email confirmation of paid subscriptions cannot be made.
 
     Problem with STRIPE's [web hook configuration](https://stripe.com/docs/webhooks).
 
-- Feature 5:  at the moment paid club subscriptions cannot be viewed
+- Feature 5:  at the moment paid club subscriptions cannot be viewed by anyone only via /admin.
+
+- User story 8: although sales commissions can be displayed, no totals are displayed. Ability to download report would be nice.
 
 
 ---
@@ -294,6 +294,13 @@ For the sake of brevity, see  [Separate TESTING document](docs/testing/TESTING.m
 [checkout/static/checkout/css/checkout.css](https://jigsaw.w3.org/css-validator/validator?uri=https://sapphire-roundworm-avh837y6.ws-eu03.gitpod.io/#/workspace/MSP4_art_sales/checkout/static/checkout/css/checkout.css)
 
 ![Valid CSS](http://jigsaw.w3.org/css-validator/images/vcss-blue)
+
+### JavaScript validated with [jshint](https://jshint.com/)
+
+- Checkout's 'stripe_elements.js' file passes, but with one comment:
+> One undefined variable
+> 21	Stripe
+
 
 ### Python/Django pylint:
 
