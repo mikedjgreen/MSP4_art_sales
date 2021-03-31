@@ -416,7 +416,7 @@ Again [Stack Overflow](https://stackoverflow.com/questions/48881196/how-to-split
 
 gives directories ('apps') :
 - artworks ```pycodestyle -v --exclude=migrations artworks > docs/pycodestyle/artworks.txt```
-- basket ```pycodestyle -v --exclude=migrations checkout > docs/pycodestyle/checkout.txt```
+- basket ```pycodestyle -v --exclude=migrations basket > docs/pycodestyle/basket.txt```
 - checkout ```pycodestyle -v --exclude=migrations checkout > docs/pycodestyle/checkout.txt```
 - custom_storages.py ```pycodestyle -v custom_storages.py > docs/pycodestyle/custom_storages.txt```
 - home ```pycodestyle -v --exclude=migrations home > docs/pycodestyle/home.txt```
