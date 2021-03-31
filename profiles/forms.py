@@ -31,6 +31,5 @@ class PatronForm(forms.ModelForm):
                 else:
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'border-black rounded-0 \
-                                                        profile-form-input'
+            self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input'  # noqa: E501
             self.fields[field].label = False

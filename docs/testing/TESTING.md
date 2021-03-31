@@ -426,7 +426,7 @@ gives directories ('apps') :
 - profiles ```pycodestyle -v --exclude=migrations profiles > docs/pycodestyle/profiles.txt```
 - templates ```pycodestyle -v --exclude=migrations templates > docs/pycodestyle/templates.txt```
 
-There has been discussion in Code Institute's SLACK chat site whether to include Django's generated python files when checking with python linter.
+There has been discussion in Code Institute's SLACK community whether to include Django's generated python files when checking with python linter.
 I agree that it serves no purpose to attempt to check and alter migration files, as the long lines reported could improve migration's efficiency.
 Hence ``` --exclude=migrations``` above.
 
@@ -434,6 +434,22 @@ There were enough self-inflicted long lines reports, e.g.
 - [Checkout Report](../pycodestyle/checkout.txt)
 - [Profiles Report](../pycodestyle/profiles.txt)
 
+I introduced the following  ignore instruction to the identified lines '  # noqa: E501'.
+This was taken from [Stack Overflow](https://stackoverflow.com/questions/18444840/how-to-disable-a-pep8-error-in-a-specific-file/18445159#18445159).
+
+``` gitpod /workspace/MSP4_art_sales/checkout $ grep "  # noqa: E501" *.py ```
+
+```webhook_handler.py:                profile.default_street_address1 = shipping_details.address.line1  # noqa: E501
+webhook_handler.py:                profile.default_street_address2 = shipping_details.address.line2  # noqa: E501
+webhook_handler.py:                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',   # noqa: E501
+webhook_handler.py:            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',   # noqa: E501
+webhooks.py:        'payment_intent.payment_failed': handler.handle_payment_intent_payment_failed,  # noqa: E501
+```
+
+```gitpod /workspace/MSP4_art_sales/profiles $ grep "  # noqa: E501" *.py```
+```
+forms.py:            self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input'  # noqa: E501
+```
 
 ## Lighthouse reports
 
