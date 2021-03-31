@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .forms import ArtworkForm, ArtworkEditForm
+from members.models import Members
 
 
 def all_artworks(request):
@@ -149,6 +150,13 @@ def my_sales(request):
 
     sold = Artworks.objects.filter(sold=True)
     usrnm = request.user.username
+
+    if usrnm:
+        try:
+            Members.objects.get(username=usrnm)
+        except Members.DoesNotExist:
+            messages.info(request, 'Sorry, only club members can do that.')
+            return redirect(reverse('home'))
 
     template = 'artworks/my_sales.html'
     context = {

@@ -3,7 +3,6 @@ from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from django.contrib import messages
 
-
 from .models import Members, Subs
 from .forms import MemberForm, SubsForm
 
@@ -49,7 +48,7 @@ def edit_member(request, member_id):
             messages.success(request, 'Successfully updated member!')
             return redirect(reverse('member_details', args=[member.id]))
         else:
-            short_msg='Failed to update member. Please ensure form is valid.'
+            short_msg = 'Failed to update member. Please ensure form is valid.'
             messages.error(request, short_msg)
     else:
         form = MemberForm(instance=member)
@@ -84,14 +83,21 @@ def pay_subs(request):
     rate = settings.CLUB_SUBSCRIPTION
 
     if usn:
-        member = get_object_or_404(Members, username=usn)
+        try:
+            member = Members.objects.get(username=usn)
+        except Members.DoesNotExist:
+            messages.info(request, 'Sorry, only club members can do that.')
+            return redirect(reverse('home'))
+
+    if member:
         template = 'members/pay_subs.html'
         context = {
             'member': member,
             'user': usn,
-            'rate': rate,
+           'rate': rate,
         }
-        return render(request, template, context)
+
+    return render(request, template, context)
 
 
 @login_required
