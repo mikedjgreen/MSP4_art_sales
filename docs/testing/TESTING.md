@@ -175,6 +175,21 @@ and appropriate display line on checkout_success page.
 
 ![Checkout Success](bug_fix_userstory2.jpg)
 
+#### 5. Feature 1 Bug on email confirmation.
+---
+- ![feat 1 bugfix 1](feature1_bugfix1.jpg)
+
+- ![feat 1 bugfix 2](feature1_bugfix2.jpg)
+
+##### Partial Resolution.
+
+Enforcing email use on the user's profile ensures that the same email address is used for email confirmation.
+The email confirmation from STRIPE still fails, though.
+Heroku logs:
+
+>2021-03-31T04:51:46.137636+00:00 app[web.1]: 10.38.28.219 - - [31/Mar/2021:04:51:46 +0000] "POST /checkout/WH/ HTTP/1.1" 404 9135 "-" "Stripe/1.0 (+https://stripe.com/docs/webhooks)"
+
+
 
 ### User Story testing
 ---
